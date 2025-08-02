@@ -1,0 +1,620 @@
+/* === text === */
+body * {
+	box-sizing: border-box;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+}
+main,
+header,
+footer,
+nav,
+aside,
+section,
+article
+{
+	display: block;
+}
+/* === abbr , acronym === */
+
+abbr,
+acronym
+{
+	color: inherit;
+	font-style: normal;
+	border-color: #333;
+	border-style: dotted;
+	border-width: 0 0 1px;
+	cursor: help;
+}
+
+/* === code === */
+
+code
+{
+	font-family: 'monospace'; /* 等幅を出す */
+}
+
+/* === kbd === */
+
+kbd /* キーボードのキー */
+{
+	font-family: 'monospace';
+	margin: 0 0.1em;
+	padding: 0 2px;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+}
+
+
+/* === explanation === */
+span.explanation
+{
+	border-color: #333;
+	border-style: dotted;
+	border-width: 0 0 1px;
+	cursor: help;
+}
+
+/* === clear , hidden === */
+
+.nd,
+.nodisplay
+{
+	display: none;
+}
+
+.hd,
+.hidden
+{
+	visibility: hidden;
+}
+
+.hl,
+.hiddenlink,
+.hiddenmessage,
+.forscreenreader,
+.skip
+{
+	position: absolute;
+	left: -9000px;
+}
+
+.div,
+.clear
+{
+	clear: both;
+}
+
+.nc,
+.noclear
+{
+	clear: none !important;
+}
+
+hr.div,
+br.div
+{
+	clear: both;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/* === clearfix === */
+
+.clearfix:after
+{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+
+
+/* === ul , ol (.nlm) === */
+
+ul.nlm,
+ol.nlm
+{
+	list-style-image: none !important;
+	list-style: none;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+ul.nlm li,
+ol.nlm li
+{
+	padding: 0;
+	margin: 0;
+}
+
+/* === ul,ol (.cmt) === */
+
+ul.cmt,
+ol.cmt
+{
+	color: #111;
+	background-color: #f8f8f8;
+	border: 1px #bbb solid;
+	margin: 10px 0;
+	padding: 8px 0 5px 40px;
+}
+
+/* === dl.cmt === */
+
+dl.cmt
+{
+	color: #111;
+	background-color: #fff;
+	margin: 0 0 15px;
+	padding: 0 15px;
+	border-bottom: #bbb 1px solid;
+	border-left: #bbb 1px solid;
+	border-right: #bbb 1px solid;
+	width: auto;
+}
+dl.cmt dt
+{
+	line-height: 100%;
+	position: relative;
+	color: #111;
+	background-color: #f8f8f8;
+	margin: 0 -15px;
+	padding: 10px 10px;
+	border-top: #bbb 1px solid;
+	border-bottom: #bbb 1px dotted;
+}
+*>dl.cmt dt
+{
+	margin: 0 -15px -5px;
+}
+dl.cmt dd
+{
+	position: relative;
+	margin: 0 -15px 0;
+	padding: 10px 10px 5px;
+}
+dl.cmt dd *
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* === p , div , pre , ul , ol (.cmt) === */
+
+pre.cmt,
+pre.cmt2,
+div.cmt,
+p.cmt
+{
+	color: #111;
+	background-color: #f8f8f8;
+	margin: 0 0 15px;
+	padding: 7px 15px;
+	border: 1px #bbb solid;
+	width: auto;
+}
+div.cmt
+{
+	padding: 8px 15px;
+}
+div.cmt *
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.cmt ul,
+div.cmt ol
+{
+	padding: 0;
+	margin-left: 25px;
+	margin-right: 0;
+}
+div.cmt ul.il,
+div.cmt ol.il
+{
+	margin-left: 0;
+}
+pre.cmt
+{
+	overflow: auto;
+}
+pre.cmt2
+{
+	white-space: pre-line;
+}
+
+
+/* === cite === */
+
+cite.jp,
+cite.ja
+{
+	font-style: normal;
+}
+cite.en,
+span.en
+{
+	font-style: italic;
+}
+cite[lang$="ja"]
+{
+	font-style: normal;
+}
+cite[lang$="en"],
+cite.foreign
+{
+	font-style: italic;
+}
+
+/* === pre.pre === */
+
+pre.pre
+{
+	border: 1px #bbb solid;
+	padding: 5px;
+	background-color: #fefefe;
+	width: 95%;
+}
+
+/* === blockquote === */
+
+blockquote.blockquote
+{
+	border: 1px #bbb dashed;
+	padding: 0 10px;
+	margin: 10px 0;
+	background-color: #fefefe;
+	width: 95%;
+}
+
+/* === forms - bttns === */
+/*
+ * TODO layout の先頭に
+ */
+.frm input[type="text"],
+.frm input[type="password"],
+.frm input[type="number"],
+.frm input[type="tel"],
+.frm input[type="email"],
+.frm input[type="url"],
+.frm input[type="date"],
+.frm input[type="time"],
+.frm input[type="week"],
+.frm input[type="month"],
+.frm input[type="datetime-local"],
+.frm input[type="search"],
+.frm textarea
+{
+	padding: 5px;
+	font-size: 110%;
+	vertical-align: middle;
+}
+.frm select
+{
+	border: 1px #999 solid;
+	font-size: 100%;
+}
+
+
+input.bttn,
+a.bttn
+{
+	box-sizing: border-box;
+	font-family: sans-serif;
+	padding: 5px 15px ;
+	margin: 0 5px 0 0;
+	background-color: #eee;
+	border: 1px solid #999;
+	color: #222;
+	line-height: 1.5em;
+	font-size: 110%;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: normal;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+input.bttn:hover,
+input.bttn:focus,
+a.bttn:hover,
+a.bttn:focus
+{
+	border: 1px solid #111;
+}
+input.bttn:active,
+a.bttn:active
+{
+	border-width: 2px;
+	padding: 4px 14px ;
+}
+
+/* === forms - mainbttn === */
+
+input.bttn.main,
+input.bttn.primary,
+a.bttn.main,
+a.bttn.primary
+{
+	font-weight: bold;
+	border: 1px solid #ccc;
+	background-color: #007acb;
+	color: #fff;
+}
+
+input.bttn.main:hover,
+input.bttn.primary:hover,
+input.bttn.main:focus,
+input.bttn.primary:focus,
+a.bttn.main:hover,
+a.bttn.primary:hover,
+a.bttn.main:focus
+a.bttn.primary:focus
+{
+	border: 1px solid #007acb;
+	background-color: #fff;
+	color: #007acb;
+
+}
+
+input.bttn.main:active,
+a.bttn.main:active
+{
+	border: 2px solid #007acb;
+}
+
+
+.textarea,
+.wide
+{
+	width: 95%;
+	height: 12em;
+}
+
+.textarea.src
+{
+	line-height: 1.6;
+	font-family: monospace;
+	background-color: #fafafa;
+	white-space: pre;
+}
+
+form em.exp,
+form em.explanation
+{
+	font-size: 90%;
+	display: block;
+}
+
+/* === form - label of checkboxes and radio === */
+
+.label_fb label,
+label.label_fb
+{
+	display: inline-block;
+	white-space:nowrap;
+	padding: 3px 3px 3px 2px;
+	margin-right: 5px;
+}
+
+.label_fb label:hover,
+label.label_fb:hover
+{
+	background-color: #e8e8e8;
+}
+
+.disabled label,
+label.disabled
+{
+	opacity: 0.5;
+}
+
+.disabled label:hover,
+label.disabled:hover
+{
+	background-color: transparent !important;
+}
+
+/* === .tbl === */
+
+.tbl
+{
+	margin: 5px 0 10px !important;
+	box-sizing: border-box;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border-top: 1px #bbb solid;
+	border-left: 1px #bbb solid;
+}
+.tbl th,
+.tbl td
+{
+	text-align: left;
+	padding: 8px 10px;
+	border-bottom: 1px #bbb solid;
+	border-right: 1px #bbb solid;
+}
+.tbl th
+{
+	text-align: left;
+	background-color: #f8f8f8;
+	white-space: nowrap;
+	font-weight: bold;
+	color: #111;
+}
+.tbl thead th
+{
+	background-color: #eee;
+	color: #111;
+}
+.tbl th > *:first-child,
+.tbl td > *:first-child
+{
+	margin-top: 0;
+}
+.tbl th > *:last-child,
+.tbl td > *:last-child
+{
+	margin-bottom: 0;
+}
+.tbl ul,
+.tbl ol
+{
+	padding: 0;
+	margin-left: 25px;
+	margin-right: 0;
+}
+
+/* === tabl.tbl1 === */
+
+.tbl1
+{
+	border-spacing: 0px;
+	box-sizing: border-box;
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px #bbb solid;
+	border-left: none;
+}
+.tbl1 th,
+.tbl1 td
+{
+	text-align: left;
+	padding: 8px 10px;
+	border-bottom: 1px #bbb solid;
+	border-right: none;
+}
+.tbl1 thead th
+{
+	color: #111;
+	background-color: #ded9d1;
+}
+.tbl1 th
+{
+	color: #111;
+	background-color: #eee;
+}
+.tbl1 td
+{
+	color: #111;
+	background-color: #fff;
+}
+
+/* === .tbl2 === */
+
+.tbl2
+{
+	box-sizing: border-box;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	background-color: #fff;
+}
+.tbl2 th,
+.tbl2 td
+{
+	text-align: left;
+	padding: 8px 10px;
+}
+.tbl2 thead th
+{
+	color: #111;
+	background: #e8e8e0;
+	font-weight: bold;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+}
+
+.tbl2 tr:nth-child(even),
+.tbl2.even tr:nth-child(even)
+{
+	background: #f4f4ea;
+}
+.tbl2 tr:nth-child(odd),
+.tbl2.even tr:nth-child(odd)
+{
+	background: #fff;
+}
+.tbl2.odd tr:nth-child(odd)
+{
+	background: #fff;
+}
+.tbl2.odd tr:nth-child(even)
+{
+	background: #f4f4ea;
+}
+
+.tbl2 th
+{
+	font-weight: normal;
+	color: #111;
+}
+.tbl2 td
+{
+	color: #111;
+}
+
+/* === table.list === */
+
+table.list th,
+table.list td
+{
+	padding: 5px 3px 0 0;
+}
+
+table.list th
+{
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: normal !important;
+}
+
+
+/* === a.lb img === */
+
+.lb img
+{
+	border: 1px #eee solid;
+}
+
+.lb:hover img
+{
+	border: 1px #58b dashed;
+}
+
+/* === align right (.cite , .sig , .cf) === */
+
+.cite,
+.sig,
+.cf
+{
+	text-align: right;
+	list-style: none;
+	clear: both;
+}
+
+/* === span.subtitle === */
+
+span.subtitle
+{
+	font-size: 90%;
+	font-weight: normal;
+}
+
+/* === span.date === */
+
+span.date
+{
+	font-size: 85%;
+	color: #555;
+}

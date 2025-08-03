@@ -1,0 +1,19 @@
+*
+{
+    scroll-behavior: smooth;
+}
+
+body {
+    @include text( 18px, $font);
+    @include noto-sans();
+    font-weight: 300;
+    background-color: $main-color;
+}
+
+
+/**
+ * ------------------------------------------------------------
+ * bottm header
+ * ------------------------------------------------------------
+*/
+

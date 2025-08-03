@@ -7,6 +7,10 @@
 
     <meta name="author" content="STEP Hall" />
     <meta name="keywords" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=League+Script&family=Lexend+Deca:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
      
     <?php wp_head(); ?>
 </head>

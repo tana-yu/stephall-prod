@@ -4,3 +4,57 @@
 08/02/25 2:03:25: layout.scss - `_variables` file not found for @import: layout.scss on line 2, at column 1
 08/02/25 2:04:25: layout.scss - `_variables` file not found for @import: layout.scss on line 2, at column 1
 08/02/25 2:06:25: layout.scss - `_variables` file not found for @import: layout.scss on line 2, at column 1
+08/03/25 7:58:23: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:00:25: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:01:14: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:01:14: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:01:16: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:01:27: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:03:27: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:05:27: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:07:27: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:09:27: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:10:51: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:10:53: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:10:56: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:10:57: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:10:57: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:11:08: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:13:09: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3
+08/03/25 8:15:11: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
+Call Stack:
+#0 import _main.scss layout.scss on line 3

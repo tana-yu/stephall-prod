@@ -1,0 +1,61 @@
+<?php
+get_template_part('parts/head'); // ← 共通 head 読み込み
+?>
+
+<header class="bottom-header">
+    <a href="<?php echo home_url(); ?>" rel="home">
+        <?php echo tagImg('main-logo.svg', get_bloginfo('name'), 'logo'); ?>
+    </a>
+    
+    <nav>
+        <li>
+            <a href="<?php echo home_url('about'); ?>">
+                About
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('schedule'); ?>">
+                Schedule
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url(''); ?>">
+                HALL Info
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('news'); ?>">
+                News
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('movie'); ?>">
+                Movie
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('faq'); ?>">
+                FAQ
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url(''); ?>">
+                ACCESS
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo home_url('contact'); ?>">
+                Contact
+            </a>
+        </li>
+    </nav>
+
+    <a href="<?php echo home_url('contact'); ?>" class="contact">
+        Contact
+    </a>
+
+    <div class="hamburger-icon" tabindex="0">
+        <span class="bar"></span>
+    </div>
+
+</header>

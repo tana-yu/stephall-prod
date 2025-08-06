@@ -5,18 +5,52 @@ $font: #231815;
 $bg-main: #BC0011;
 $border: #D9D9D9;
 
-@mixin text( $size, $color, $line-height:normal)
-{
+@mixin text( $size, $color, $line-height:normal) {
     font-size: $size;
     color: $color;
     line-height: $line-height;
     letter-spacing: 0.08em;
 }
 
-@mixin noto-sans()
-{
+@mixin noto-sans() {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 0.08em;
+}
+
+
+@mixin fw-bold() {
+  font-weight: 700;
+}
+
+@mixin fw-semibold() {
+  font-weight: 600;
+}
+
+@mixin fw-medium() {
+  font-weight: 400;
+}
+
+@mixin fw-regular() {
+  font-weight: 300;
+}
+
+@mixin flex($jc:flex-start, $ai:flex-start, $fd:row) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+@mixin link-arrow() {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 60%;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid $main-light-color;
+    border-right: 2px solid $main-light-color;
+    transform: translateY(-50%) rotate(45deg);
 }

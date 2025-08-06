@@ -6,14 +6,162 @@
 body {
     @include text( 18px, $font);
     @include noto-sans();
-    font-weight: 300;
+    @include fw-regular();
     background-color: $main-color;
 }
 
 
 /**
  * ------------------------------------------------------------
- * bottm header
+ * bottom header
  * ------------------------------------------------------------
 */
 
+body > .bottom-header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    @include flex($jc:space-between, $ai:center);
+    width: 100%;
+    padding: 14px 10px;
+    background-color: $main-color;
+
+    .logo {
+        display: block;
+        
+        > img {
+            width: 120px;
+        }
+    }
+
+    .hamburger-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 101;
+        display: none;
+        width: 100vw;
+        height: 100%;
+        z-index: 101;
+        background-color: rgba($color: #000, $alpha: 0.6)
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 102;
+        display: block;
+        width: 80%;
+        height: 100%;
+        padding: calc(100vh - 620px) 20px 0;
+        background-color: $main-color;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+
+        &.hm-visible {
+            transform: translateX(0);
+        }
+
+        li {
+            border-bottom: 1px solid $main-light-color;
+
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                padding: 20px 0 10px;
+                @include fw-bold();
+                color: $main-light-color;
+
+                &:after {
+                    @include link-arrow();
+                }
+            }
+        }
+
+        .list-contact {
+            border: none;
+
+            a {
+                width: 100%;
+                margin-top: 20px;
+                padding: 12px 0;
+                color: $main-color;
+                text-align: center;
+                background-color: $main-light-color;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .contact {
+        display: block;
+        margin-right: 40px;
+        padding: 5px 14px;
+        @include fw-bold();
+        color: $main-color;
+        background-color: $main-light-color;
+    }
+
+    .hamburger-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        z-index: 105;
+        transform: translateY(-50%);
+        @include flex(center,center);
+        width: 27px;
+        height: 16px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+            transition: .3s;
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 27px;
+            height: 2px;
+            background-color: $main-light-color;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 27px;
+                height: 2px;
+                background-color: white;
+                left: 0;
+            }
+
+            &::before {
+                top: -8px;
+            }
+
+            &::after {
+                top: 8px;
+            }
+
+            &.hm-close {
+                background-color: transparent;
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}

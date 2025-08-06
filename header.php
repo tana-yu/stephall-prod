@@ -3,10 +3,11 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
 ?>
 
 <header class="bottom-header">
-    <a href="<?php echo home_url(); ?>" rel="home">
+    <a class="logo" href="<?php echo home_url(); ?>" rel="home">
         <?php echo tagImg('main-logo.svg', get_bloginfo('name'), 'logo'); ?>
     </a>
     
+    <div class="hamburger-overlay"></div>
     <nav>
         <li>
             <a href="<?php echo home_url('about'); ?>">
@@ -43,7 +44,7 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
                 ACCESS
             </a>
         </li>
-        <li>
+        <li class="list-contact">
             <a href="<?php echo home_url('contact'); ?>">
                 Contact
             </a>
@@ -57,5 +58,4 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
     <div class="hamburger-icon" tabindex="0">
         <span class="bar"></span>
     </div>
-
 </header>

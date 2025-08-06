@@ -53,5 +53,13 @@ function enqueue_theme_assets() {
         [],
         filemtime($theme_dir . '/assets/css/style.css')
     );
+
+    wp_enqueue_script(
+        'hamburger-menu',
+        $theme_uri . '/assets/js/hamburger-menu.js',
+        [],
+        filemtime($theme_dir . '/assets/js/hamburger-menu.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_assets');

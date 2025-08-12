@@ -152,9 +152,14 @@ body.home {
             > p {
                 margin-bottom: 30px;
                 line-height: 1.6;
+
+                > a {
+                    color: $main-light-color;
+                    border-bottom: 1px solid $main-light-color;
+                }
             }
 
-            a {
+            > a {
                 position: relative;
                 display: block;
                 width: 280px;
@@ -174,6 +179,7 @@ body.home {
 
         .splide {
             margin-top: 45px;
+
             .splide__track {
                 .splide__list {
                     .splide__slide {
@@ -191,6 +197,11 @@ body.home {
         padding: 10px;
 
         .text-area {
+
+            > img {
+                display: block;
+                width: 240px;
+            }
             
             .address {
                 margin-top: 15px;

@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     drag       : true,
     autoScroll: {
         speed: 0.5,
-        pauseOnHover: true,
+        pauseOnHover: false,
     },
     breakpoints: {
         1024: { // 1024px以下

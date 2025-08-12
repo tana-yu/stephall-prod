@@ -26,7 +26,7 @@ get_header();
                 <?php echo tagImg('/home/schedule-img.webp', ''); ?>
             </div>
             <div class="text">
-                <h2 class="title">HOP STUDIO’s Collection</h2>
+                <h2 class="title">HOP STUDIO’s Collection sssssalsalsalsalsalsal</h2>
                 <p class="performer">STAYG/音モダーチ/瀧本りおな/ゆしん</p>
                 <p class="info">
                     OPEN：<span>18:30</span>　START：<span>19:30</span><br>
@@ -46,9 +46,7 @@ get_header();
         <div class="schedule">
             <div class="scroll-bar">
                 <span>SCROLL</span>
-                <div class="bar">
-                    <span></span>
-                </div>
+                <div class="bar"></div>
             </div>
 
             <ul class="list-link-cards">
@@ -263,7 +261,7 @@ get_header();
                 定期イベント・自主企画・トークショー・お笑いなどイベント大募集中です！<br>
                 皆さんの最高の思い出になるライブを一緒に作りませんか？<br>
                 小さなことでも、まずご相談ください！<br>
-                お問い合わせフォームからご連絡お待ちしております！
+                <a href="<?php echo home_url('contact'); ?>">お問い合わせフォーム</a>からご連絡お待ちしております！
             </p>
             <a href="" class="line-btn">ホールレンタルについて</a>
         </div>
@@ -321,27 +319,27 @@ get_header();
 
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="https://www.facebook.com/StepHALLexMINOYAHALL/" target="_blank">
                             <?php echo tagImg('/home/facebook.svg', ''); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://x.com/StepHALL2nd" target="_blank">
                             <?php echo tagImg('/home/x.svg', ''); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.youtube.com/channel/UCQaP3-6dn4qNCMXsifbYrVA" target="_blank">
                             <?php echo tagImg('/home/youtube.svg', ''); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.instagram.com/stephallexminoyahall/?hl=ja" target="_blank">
                             <?php echo tagImg('/home/instagram.svg', ''); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://www.tiktok.com/@stephall0408?is_from_webapp=1&sender_device=pc" target="_blank">
                             <?php echo tagImg('/home/tiktok.svg', ''); ?>
                         </a>
                     </li>

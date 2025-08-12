@@ -1,5 +1,265 @@
 @media screen and (min-width: 800px) {
     body.home {
+        section.top {
 
+            @media screen and (min-width: 1920px) {
+                padding-left: calc(50vw - 960px);
+                padding-right: calc(50vw - 960px);
+            }
+
+            > video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            > img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 20;
+                width: 450px;
+                transform: translate(-50%,-50%);
+            }
+
+            .scroll {
+                position: absolute;
+                bottom: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: inline-block;
+                font-size: 18px;
+                color: $main-color;
+                padding-bottom: 10px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 1px;
+                    height: 30px;
+                    background: linear-gradient(to top, $main-color);
+                    animation: scroll-line 1.5s infinite;
+                }
+            }
+
+            @keyframes scroll-line {
+                0% {
+                    height: 0px;
+                }
+                100% {
+                    height: 30px;
+                }
+            }
+        }
+
+        section.today {
+            position: relative;
+            max-width: 1366px;
+            margin: 120px auto 0;
+            padding: 35px 10px 0;
+            padding-top: 35px;
+            text-align: left;
+
+            @media screen and (min-width: 1366px) {
+                padding: 35px 0 0;
+            }
+        }
+
+        section.page-links {
+            width: min(100%, 1366px);
+            margin: 120px auto 0;
+            padding: 0 10px;
+
+            @media screen and (min-width: 1366px) {
+                padding: 0;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+
+                @media screen and (min-width: 1150px) {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+
+
+                li {
+                    margin-bottom: 0;
+                    border: none;
+
+                    a {
+                        position: relative;
+                        display: block;
+                        height: 240px;
+                        padding: 15px;
+                        border: 1px solid $main-light-color;
+
+                        &:after {
+                            @include link-arrow(5px, 40%, 2px);
+                            position: static;
+                            border: none;
+                        }
+
+                        .image {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: -1;
+                            width: 60%;
+
+                            > img {
+                                top: 50%;
+                                width: 100%;
+                                max-width: 190px;
+                                height: auto;
+                                max-height: 150px;
+                            }
+                        }
+
+                        .text {
+                            justify-content: center;
+                            align-items: center;
+                            padding-left: 0;
+
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                font-size: 35px;
+                                text-align: center;
+                            }
+
+                            .leading-text {
+                                position: absolute;
+                                top: auto;
+                                bottom: 15px;
+                                padding-top: 0;
+                                padding-right: 15px;
+                                font-size: 14px;
+                                @include fw-regular();
+
+                                &:after {
+                                    @include link-arrow();
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.hall-rental {
+            width: min(100%, 1366px);
+            margin: 120px auto 0;
+            padding: 0 10px;
+
+            @media screen and (min-width: 1366px) {
+                padding: 0;
+            }
+
+            > img {
+                width: 100%;
+            }
+
+            .sub-headline {
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 35px;
+
+                > p {
+                    margin-bottom: 30px;
+                    line-height: 1.6;
+                }
+
+                .line-btn {
+                    position: relative;
+                    display: block;
+                    width: 380px;
+                    margin: 0;
+                    padding: 18px 10px 18px 15px;
+                    border: 1px solid $main-light-color;
+                    font-size: 18px;
+                    @include fw-bold();
+                    color: $main-light-color;
+                    text-align: center;
+
+                    &:after {
+                        @include link-arrow(10px,$border-width:2px);
+                    }
+                }
+            }
+
+            .splide {
+                margin-top: 30px;
+                
+                .splide__track {
+                    .splide__list {
+                        .splide__slide {
+                            img {
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section.access {
+            @include flex($jc:space-between);
+            width: min(100%, 1366px);
+            margin: 120px auto 0;
+            padding: 0 10px;
+
+            @media screen and (min-width: 1366px) {
+                padding: 0;
+            }
+
+            .text-area {
+                
+                .address {
+                    margin-top: 30px;
+                }
+
+                .tel {
+                    margin-top: 30px;
+                }
+
+                .mail {
+                    margin-top: 23px;
+
+                    h2 {
+                        &:before {
+                            left: -2px;
+                            width: 20px;
+                            height: 18px;
+                        }
+                    }
+                }
+
+                .sns {
+                    margin-top: 20px;
+
+                    h2 {
+                        &:before {
+                            left: -2px;
+                            width: 21px;
+                            height: 21px;
+                        }
+                    }
+                }
+            }
+
+            .map {
+                width: 50%;
+                margin-top: 0;
+                padding-top: 700px;
+            }
+        }
     }
 }

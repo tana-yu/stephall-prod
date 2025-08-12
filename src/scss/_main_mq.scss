@@ -8,6 +8,11 @@
 
     body > .bottom-header {
 
+        @media screen and (min-width: 1920px) {
+            padding-left: calc(50vw - 960px);
+            padding-right: calc(50vw - 960px);
+        }
+
         .logo {
             > img {
                 width: 160px;

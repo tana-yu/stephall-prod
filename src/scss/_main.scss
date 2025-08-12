@@ -76,7 +76,15 @@ body > .bottom-header {
                 color: $main-light-color;
 
                 &:after {
-                    @include nav-link-arrow();
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 60%;
+                    width: 6px;
+                    height: 6px;
+                    border-top: 2px solid $main-light-color;
+                    border-right: 2px solid $main-light-color;
+                    transform: translateY(-50%) rotate(45deg);
                 }
             }
         }

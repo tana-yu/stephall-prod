@@ -35,18 +35,6 @@ $border: #D9D9D9;
     flex-direction: $fd;
 }
 
-@mixin nav-link-arrow() {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 60%;
-    width: 6px;
-    height: 6px;
-    border-top: 2px solid $main-light-color;
-    border-right: 2px solid $main-light-color;
-    transform: translateY(-50%) rotate(45deg);
-}
-
 @mixin link-arrow($right:0, $top:50%, $border-width:1px) {
     content: "";
     position: absolute;

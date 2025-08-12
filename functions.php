@@ -63,3 +63,14 @@ function enqueue_theme_assets() {
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_assets');
+
+// スライダー
+function enqueue_splide_assets() {
+    // Splide 本体の CSS・JS
+    wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css');
+    wp_enqueue_script('splide-js', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js', [], null, true);
+
+    // AutoScroll 拡張（※splide-jsの後に読み込む）
+    wp_enqueue_script('splide-autoscroll', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.1/dist/js/splide-extension-auto-scroll.min.js', ['splide-js'], null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_splide_assets');

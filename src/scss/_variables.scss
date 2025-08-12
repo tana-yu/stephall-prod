@@ -24,16 +24,8 @@ $border: #D9D9D9;
   font-weight: 700;
 }
 
-@mixin fw-semibold() {
-  font-weight: 600;
-}
-
-@mixin fw-medium() {
-  font-weight: 400;
-}
-
 @mixin fw-regular() {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @mixin flex($jc:flex-start, $ai:flex-start, $fd:row) {
@@ -43,7 +35,7 @@ $border: #D9D9D9;
     flex-direction: $fd;
 }
 
-@mixin link-arrow() {
+@mixin nav-link-arrow() {
     content: "";
     position: absolute;
     right: 0;
@@ -53,4 +45,279 @@ $border: #D9D9D9;
     border-top: 2px solid $main-light-color;
     border-right: 2px solid $main-light-color;
     transform: translateY(-50%) rotate(45deg);
+}
+
+@mixin link-arrow($right:0, $top:50%, $border-width:1px) {
+    content: "";
+    position: absolute;
+    right: $right;
+    top: $top;
+    width: 6px;
+    height: 6px;
+    border-top: $border-width solid $main-light-color;
+    border-right: $border-width solid $main-light-color;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+@mixin home-content-title() {
+  display: block;
+  width: auto;
+  height: 30px;
+  margin: 0 auto 20px;
+}
+
+@mixin schedule-list() {
+  display: block;
+  width: min(100%, 500px);
+  margin: 0 auto;
+  padding: 12px;
+  background-color: $main-light-color;
+
+  .head {
+      @include flex(space-between,center);
+      gap: 10px;
+
+      .event-date {
+          width: 100px;
+          color: $main-color;
+
+          .month {
+              font-size: 16px;
+              @include fw-bold();
+          }
+
+          .date {
+              display: block;
+              margin-top: -5px;
+              font-size: 60px;
+              color: $main-color;
+              @include fw-bold();
+              line-height: 1;
+              text-align: center;
+          }
+
+          .day-of-the-week {
+              display: block;
+              font-size: 12px;
+          }
+      }
+
+      > img {
+          flex: 1;
+          width: calc( 100% - 100px );
+          aspect-ratio: 369 / 260;
+          object-fit: fill;
+      }
+  }
+
+  .text {
+      margin-top: 15px;
+
+      .title {
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          font-size: 18px;
+          color: $main-color;
+          border-bottom: 1px solid $main-color;
+      }
+
+      .performer {
+          margin-bottom: 10px;
+          font-size: 12px;
+      }
+
+      .info {
+          margin-bottom: 15px;
+          font-size: 12px;
+      }
+  }
+
+  .leading-btn {
+      width: 100%;
+      padding: 8px 0;
+      text-align: center;
+      font-size: 12px;
+      @include fw-bold();
+      text-align: center;;
+      color: $main-light-color;
+      background-color: $main-color;
+  }
+}
+
+@mixin home-schedule-list {
+  margin-top: 60px;
+
+  > img {
+      @include home-content-title();
+  }
+
+  .schedule {
+      position: relative;
+      padding: 0 10px;
+
+      .scroll-bar {
+          @include flex($ai:center);
+          width: 100%;
+
+          > span {
+              font-size: 15px;
+              @include fw-bold();
+              color: $font;
+          }
+
+          .bar {
+              display: block;
+              margin-left: 15px;
+              width: 100%;
+              height: 1px;
+              background-color: $font;
+              animation: shrinkBar 3s ease infinite;
+          }
+      }
+
+      @keyframes shrinkBar {
+          0% {
+              width: 100%;
+          }
+          50% {
+              width: 0%; // 縮んだ時の割合
+          }
+          100% {
+              width: 100%;
+          }
+      }
+
+      .list-link-cards {
+          @include flex();
+          width: 100%;
+          margin: 0 0 35px;
+          padding: 10px 0;
+          overflow-x: scroll;
+          scrollbar-width: none;
+
+          li {
+              width: 240px;
+              min-width: 240px;
+              margin-right: 15px;
+
+              &:first-child {
+                  margin-left: 50px;
+              }
+
+              &:last-child {
+                  margin-right: 0;
+              }
+
+              .card {
+                  display: block;
+
+                  > img {
+                      display: block;
+                      width: 100%;
+                      aspect-ratio: 369 / 260;
+                      object-fit: fill;
+                  }
+
+                  .text-area {
+                      @include flex($ai:flex-end);
+                      padding-top: 3px;
+                      color: $main-light-color;
+
+                      .date-info {
+                          @include flex($ai:center);
+                          line-height: 1.2;
+
+                          > div {
+                              padding-top: 2px;
+
+                              span {
+                                  display: block;
+                              }
+
+                              .month {
+                                  padding-bottom: 2px;
+                                  font-size: 10px;
+                                  @include fw-bold();
+                              }
+
+                              .day-of-the-week {
+                                  font-size: 10px;
+                              }
+                          }
+
+                          .date {
+                              padding-left: 5px;
+                              font-size: 32px;
+                              @include fw-bold();
+                              color: $main-light-color;
+                              line-height: 1;
+                          }
+                      }
+
+                      > p {
+                          position: relative;
+                          flex: 1;
+                          margin-left: 5px;
+                          padding-bottom: 3px;
+                          font-size: 12px;
+                          border-bottom: 1px solid $main-light-color;
+
+                          &:after {
+                              @include link-arrow();
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  .line-btn {
+    a {
+      position: relative;
+      display: block;
+      width: 170px;
+      margin: 0 auto;
+      padding: 12px 10px 12px 0;
+      border: 1px solid $main-light-color;
+      font-size: 16px;
+      @include fw-bold();
+      color: $main-light-color;
+      text-align: center;
+
+      &:after {
+        @include link-arrow(10px);
+      }
+    }
+  }
+}
+
+@mixin home-access-h2($icon, $icon-w, $icon-h) {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  font-size: 22px;
+  @include fw-bold();
+
+  &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: $icon-w;
+      height: $icon-h;
+      transform: translateY(-50%);
+      background-image: $icon;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;   
+  }
+
+  > a {
+      vertical-align: 5px;
+      font-size: 14px;
+      @include fw-regular();
+      color: $main-light-color;
+      border-bottom: 1px solid $main-light-color;
+  }
 }

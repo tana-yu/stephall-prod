@@ -684,6 +684,23 @@ body.home section.today .schedule-list .head .event-date .day-of-the-week {
   font-size: 12px;
   text-align: center;
 }
+body.home section.today .schedule-list .head .event-date .day-icon, body.home section.today .schedule-list .head .event-date .night-icon {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 2px 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: #FFF9F9;
+  text-align: center;
+  border-radius: 10px;
+}
+body.home section.today .schedule-list .head .event-date .day-icon {
+  background-color: #E89300;
+}
+body.home section.today .schedule-list .head .event-date .night-icon {
+  background-color: #000595;
+}
 body.home section.today .schedule-list .head > img {
   flex: 1;
   width: calc(100% - 100px);
@@ -753,6 +770,10 @@ body.home section.today .schedule-list .leading-btn {
     font-size: 15px;
     text-align: center;
   }
+  body.home section.today .schedule-list .head .event-date .day-icon, body.home section.today .schedule-list .head .event-date .night-icon {
+    padding: 3px 0;
+    font-size: 12px;
+  }
   body.home section.today .schedule-list .head > img {
     width: 215px;
   }
@@ -783,6 +804,9 @@ body.home section.today .schedule-list .leading-btn {
     text-align: center;
     writing-mode: vertical-rl;
   }
+}
+body.home section.today .schedule-list:last-child {
+  margin-top: 20px;
 }
 body.home section.this-month {
   margin-top: 60px;

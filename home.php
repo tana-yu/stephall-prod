@@ -22,6 +22,30 @@ get_header();
                     <span class="month">08/</span>
                     <span class="date">01</span>
                     <span class="day-of-the-week">Wednesday</span>
+                    <span class="day-icon">昼</span>
+                </div>
+                <?php echo tagImg('/home/schedule-img.webp', ''); ?>
+            </div>
+            <div class="text">
+                <h2 class="title">HOP STUDIO’s Collection sssssalsalsalsalsalsal</h2>
+                <p class="performer">STAYG/音モダーチ/瀧本りおな/ゆしん</p>
+                <p class="info">
+                    OPEN：<span>18:30</span>　START：<span>19:30</span><br>
+                    ADV：<span>3,500円</span>　DOOR：<span>4,000円+1Drink</span>
+                </p>
+            </div>
+            <div class="leading-btn">
+                詳細はコチラ
+            </div>
+        </a>
+
+        <a class="schedule-list" href="">
+            <div class="head">
+                <div class="event-date">
+                    <span class="month">08/</span>
+                    <span class="date">01</span>
+                    <span class="day-of-the-week">Wednesday</span>
+                    <span class="night-icon">夜</span>
                 </div>
                 <?php echo tagImg('/home/schedule-img.webp', ''); ?>
             </div>

@@ -64,6 +64,10 @@ body.home {
 
         .schedule-list {
             @include schedule-list();
+
+            &:last-child {
+                margin-top: 20px;
+            }
         }
     }
 

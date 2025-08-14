@@ -27,7 +27,7 @@ get_header();
 
         $args = [
             'post_type'      => 'live-schedule',
-            'posts_per_page' => 10,
+            'posts_per_page' => 31,
             'paged'          => $paged,
             'meta_key'       => 'schedule_date',
             'orderby'        => 'meta_value',
@@ -159,8 +159,8 @@ get_header();
             'total'   => $q->max_num_pages ?? 1,
             'current' => $paged,
             'mid_size'=> 1,
-            'prev_text' => '«',
-            'next_text' => '»',
+            'prev_text' => '<',
+            'next_text' => '>',
         ]);
         ?>
     </div>

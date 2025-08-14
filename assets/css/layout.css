@@ -933,6 +933,7 @@ body.home section.this-month .schedule .list-link-cards li .card {
 body.home section.this-month .schedule .list-link-cards li .card > img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 1.4192307692;
   object-fit: fill;
 }
@@ -1214,6 +1215,7 @@ body.home section.news .schedule .list-link-cards li .card {
 body.home section.news .schedule .list-link-cards li .card > img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 1.4192307692;
   object-fit: fill;
 }
@@ -2021,6 +2023,7 @@ body.single-live-schedule section.content {
 body.single-live-schedule section.content .post-thumbnail {
   display: block;
   width: 100%;
+  height: auto;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 800px) {
@@ -2087,6 +2090,13 @@ body.single-live-schedule section.content .performer {
 body.single-live-schedule section.content .note {
   margin-bottom: 50px;
   font-size: 16px;
+}
+body.single-live-schedule section.content .note p {
+  font-size: 16px;
+}
+body.single-live-schedule section.content .note a {
+  color: #FFF9F9;
+  border-bottom: 1px solid #FFF9F9;
 }
 @media screen and (min-width: 800px) {
   body.single-live-schedule section.content .note {

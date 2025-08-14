@@ -16,52 +16,82 @@ get_header();
     <section class="today">
         <?php echo tagImg('/home/today.svg', 'TODAY'); ?>
 
-        <a class="schedule-list" href="">
-            <div class="head">
-                <div class="event-date">
-                    <span class="month">08/</span>
-                    <span class="date">01</span>
-                    <span class="day-of-the-week">Wednesday</span>
-                    <span class="day-icon">昼</span>
-                </div>
-                <?php echo tagImg('/home/schedule-img.webp', ''); ?>
-            </div>
-            <div class="text">
-                <h2 class="title">HOP STUDIO’s Collection sssssalsalsalsalsalsal</h2>
-                <p class="performer">STAYG/音モダーチ/瀧本りおな/ゆしん</p>
-                <p class="info">
-                    OPEN：<span>18:30</span>　START：<span>19:30</span><br>
-                    ADV：<span>3,500円</span>　DOOR：<span>4,000円+1Drink</span>
-                </p>
-            </div>
-            <div class="leading-btn">
-                詳細はコチラ
-            </div>
-        </a>
+        <?php
+        $today    = current_time('Y-m-d');
+        $tomorrow = date('Y-m-d', strtotime($today . ' +1 day'));
 
-        <a class="schedule-list" href="">
-            <div class="head">
-                <div class="event-date">
-                    <span class="month">08/</span>
-                    <span class="date">01</span>
-                    <span class="day-of-the-week">Wednesday</span>
-                    <span class="night-icon">夜</span>
-                </div>
-                <?php echo tagImg('/home/schedule-img.webp', ''); ?>
-            </div>
-            <div class="text">
-                <h2 class="title">HOP STUDIO’s Collection sssssalsalsalsalsalsal</h2>
-                <p class="performer">STAYG/音モダーチ/瀧本りおな/ゆしん</p>
-                <p class="info">
-                    OPEN：<span>18:30</span>　START：<span>19:30</span><br>
-                    ADV：<span>3,500円</span>　DOOR：<span>4,000円+1Drink</span>
-                </p>
-            </div>
-            <div class="leading-btn">
-                詳細はコチラ
-            </div>
-        </a>
+        $args = [
+            'post_type'      => 'live-schedule',
+            'posts_per_page' => -1,
+            'meta_query'     => [
+                'relation' => 'AND',
+                [
+                    'key'     => 'schedule_date',
+                    'value'   => $today,
+                    'compare' => '>=',
+                    'type'    => 'DATE'
+                ],
+                [
+                    'key'     => 'schedule_date',
+                    'value'   => $tomorrow,
+                    'compare' => '<',
+                    'type'    => 'DATE'
+                ]
+            ],
+            'meta_key'       => 'day_or_night',
+            'orderby'        => 'meta_value',
+            'order'          => 'ASC',
+        ];
 
+
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+                $schedule_date = get_post_meta(get_the_ID(), 'schedule_date', true);
+                $performers    = get_post_meta(get_the_ID(), 'performers', true);
+                $open_time     = get_post_meta(get_the_ID(), 'open_time', true);
+                $start_time    = get_post_meta(get_the_ID(), 'start_time', true);
+                $adv_price     = get_post_meta(get_the_ID(), 'adv_price', true);
+                $door_price    = get_post_meta(get_the_ID(), 'door_price', true);
+                $day_or_night  = get_post_meta(get_the_ID(), 'day_or_night', true);
+                $weekday = date('l', strtotime($schedule_date));
+                ?>
+                <a class="schedule-list" href="<?php the_permalink(); ?>">
+                    <div class="head">
+                        <div class="event-date">
+                            <span class="month"><?php echo date_i18n('m/', strtotime($schedule_date)); ?></span>
+                            <span class="date"><?php echo date_i18n('d', strtotime($schedule_date)); ?></span>
+                            <span class="day-of-the-week"><?php echo esc_html($weekday); ?></span>
+                            <?php if ($day_or_night === 'day') : ?>
+                                <span class="day-icon">昼</span>
+                            <?php elseif ($day_or_night === 'night') : ?>
+                                <span class="night-icon">夜</span>
+                            <?php endif; ?>
+                        </div>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('medium'); ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="text">
+                        <h2 class="title"><?php the_title(); ?></h2>
+                        <p class="performer"><?php echo nl2br(esc_html($performers)); ?></p>
+                        <p class="info">
+                            <?php if ($open_time) : ?>OPEN：<span><?php echo esc_html($open_time); ?></span><?php endif; ?>
+                            <?php if ($start_time) : ?>　START：<span><?php echo esc_html($start_time); ?></span><?php endif; ?><br>
+                            <?php if ($adv_price) : ?>ADV：<span><?php echo esc_html($adv_price); ?></span><?php endif; ?>
+                            <?php if ($door_price) : ?>　DOOR：<span><?php echo esc_html($door_price); ?></span><?php endif; ?>
+                        </p>
+                    </div>
+                    <div class="leading-btn">
+                        詳細はコチラ
+                    </div>
+                </a>
+                <?php
+            endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
     </section>
 
     <section class="this-month">
@@ -74,32 +104,89 @@ get_header();
             </div>
 
             <ul class="list-link-cards">
+                <?php
+                // 今月の初日と末日
+                $start_of_month = date('Y-m-01');
+                $end_of_month   = date('Y-m-t');
 
-                <?php for ($i = 0; $i < 10; $i++): ?>
+                $args = [
+                    'post_type'      => 'live-schedule',
+                    'posts_per_page' => -1,
+                    'meta_query'     => [
+                        'relation' => 'AND',
+                        [
+                            'key'     => 'schedule_date',
+                            'value'   => $start_of_month,
+                            'compare' => '>=',
+                            'type'    => 'DATE'
+                        ],
+                        [
+                            'key'     => 'schedule_date',
+                            'value'   => $end_of_month,
+                            'compare' => '<=',
+                            'type'    => 'DATE'
+                        ]
+                    ],
+                    // 昼夜順の前に日付順を優先
+                    'orderby' => [
+                        'schedule_date_clause' => 'ASC',
+                        'day_or_night_clause'  => 'ASC',
+                    ],
+                    'meta_query' => [
+                        'relation' => 'AND',
+                        'schedule_date_clause' => [
+                            'key'     => 'schedule_date',
+                            'value'   => [$start_of_month, $end_of_month],
+                            'compare' => 'BETWEEN',
+                            'type'    => 'DATE',
+                        ],
+                        'day_or_night_clause' => [
+                            'key'   => 'day_or_night',
+                            'type'  => 'CHAR',
+                        ],
+                    ]
+                ];
+
+                $month_query = new WP_Query($args);
+
+                if ($month_query->have_posts()) :
+                    while ($month_query->have_posts()) : $month_query->the_post();
+                        $schedule_date = get_post_meta(get_the_ID(), 'schedule_date', true);
+                        $day_or_night  = get_post_meta(get_the_ID(), 'day_or_night', true);
+                        $weekday       = date('D', strtotime($schedule_date)); // 英語略称
+                ?>
                     <li>
-                        <a href="" class="card">
-                            <?php echo tagImg('/home/schedule-img.webp', ''); ?>
+                        <a href="<?php the_permalink(); ?>" class="card">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('medium'); ?>
+                            <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-image.webp" alt="No image" />
+                            <?php endif; ?>
                             <div class="text-area">
                                 <div class="date-info">
                                     <div>
-                                        <span class="month">08/</span>
-                                        <span class="day-of-the-week">WED</span>
+                                        <span class="month"><?php echo date('m/', strtotime($schedule_date)); ?></span>
+                                        <span class="day-of-the-week"><?php echo esc_html($weekday); ?></span>
                                     </div>
-                                    <span class="date">23</span>
+                                    <span class="date"><?php echo date('d', strtotime($schedule_date)); ?></span>
                                 </div>
-                                <p>クリックして詳細を見る</p>
+                                <p><?php the_title(); ?></p>
                             </div>
                         </a>
                     </li>
-                <?php endfor; ?>
-
+                <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata();
+                ?>
             </ul>
 
             <div class="line-btn">
-                <a href="">View More</a>
+                <a href="<?php echo home_url('/live-schedule'); ?>">View More</a>
             </div>
         </div>
     </section>
+
 
 
     <section class="news">

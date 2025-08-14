@@ -99,6 +99,7 @@ body.single-live-schedule {
         .post-thumbnail {
             display: block;
             width: 100%;
+            height: auto;
             margin-bottom: 30px;
 
             @media screen and (min-width: 800px) {
@@ -165,6 +166,15 @@ body.single-live-schedule {
         .note {
             margin-bottom: 50px;
             font-size: 16px;
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                color: $main-light-color;
+                border-bottom: 1px solid $main-light-color;
+            }
 
             @media screen and (min-width: 800px) {
                 margin-bottom: 60px;

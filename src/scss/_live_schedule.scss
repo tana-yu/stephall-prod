@@ -1,0 +1,219 @@
+/**
+ * ------------------------------------------------------------
+ * live-schedule一覧
+ * ------------------------------------------------------------
+*/
+
+body.post-type-archive-live-schedule {
+
+    .headline {
+        @include child-page-headline();
+    }
+
+    section.content {
+        padding: 0 10px;
+
+        @media screen and (min-width: 800px) {
+            width: min(100%, 800px);
+            margin: 0 auto;
+        }
+
+        .tab-menu {
+            @include flex($ai:flex-end);
+            margin-bottom: 15px;
+
+            @media screen and (min-width: 800px) {
+                justify-content: center;
+                margin: 0 auto 40px;
+            }
+
+            .month {
+                width: 100px;
+                margin-right: 15px;
+                font-size: 20px;
+                @include fw-bold();
+                color: $main-light-color;
+                text-align: center;
+                border-bottom: 1px solid $main-light-color;
+                cursor: pointer;
+                transition: .4s;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .tab-active {
+                font-size: 35px;
+                color: $font;
+                border-bottom: 1px solid $font;
+                cursor: auto;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .list-link-cards {
+            li {
+                .schedule-list {
+                    @include schedule-list($pc-margin: 0 0 30px 0);
+                }
+
+                &:last-child .schedule-list {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        @include back-btn();
+    }
+}
+
+/**
+ * ------------------------------------------------------------
+ * live-schedule詳細
+ * ------------------------------------------------------------
+*/
+
+body.single-live-schedule {
+    .headline {
+        @include child-page-headline();
+    }
+
+    section.content {
+        padding: 0 10px;
+
+        @media screen and (min-width: 800px) {
+            width: min(100%, 800px);
+            margin: 0 auto;
+        }
+
+        .post-thumbnail {
+            display: block;
+            width: 100%;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: 800px) {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+
+        .date {
+            font-size: 20px;
+
+            @media screen and (min-width: 800px) {
+                font-size: 40px;
+            }
+
+            span {
+                font-size: 12px;
+
+                @media screen and (min-width: 800px) {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 20px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 25px;
+                font-size: 35px;
+            }
+        }
+
+        .info {
+            margin-bottom: 15px;
+            font-size: 15px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 25px;
+                font-size: 22px;
+            }
+        }
+
+        .performer-title {
+            font-size: 16px;
+            @include fw-regular();
+
+            @media screen and (min-width: 800px) {
+                font-size: 22px;
+            }
+        }
+
+        .performer {
+            margin-bottom: 30px;
+            font-size: 16px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 40px;
+                font-size: 22px;
+            }
+        }
+
+        .note {
+            margin-bottom: 50px;
+            font-size: 16px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 60px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .promotion-btn {
+        @include flex($ai:center,$fd:column);
+
+        > button {
+            width: 300px;
+            margin-bottom: 20px;
+            padding: 15px 0;
+            font-size: 14px;
+            @include fw-bold();
+            color: $main-light-color;
+            border: 1px solid $main-light-color;
+            background-color: transparent;
+            cursor: pointer;
+            transition: .4s;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            width: min(100%,800px);
+            margin: 0 auto;
+            padding: 0 10px;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 15px;
+
+            button {
+                width: calc(100% / 3);
+                margin-bottom: 0;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .back-btn {
+        @include back-btn();
+    }
+}

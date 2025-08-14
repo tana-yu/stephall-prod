@@ -55,7 +55,7 @@ body > .bottom-header {
         display: block;
         width: 80%;
         height: 100%;
-        padding: calc(100vh - 620px) 20px 0;
+        padding: calc(100svh - 620px) 20px 0;
         background-color: $main-color;
         transform: translateX(100%);
         transition: transform 0.3s ease;
@@ -193,6 +193,39 @@ body > footer {
     .copyrights {
         small {
             font-size: 10px;
+        }
+    }
+}
+
+
+
+/**
+ * ------------------------------------------------------------
+ * page-top-menu
+ * ------------------------------------------------------------
+*/
+
+body > .page-top-menu {
+    @include flex($jc:space-between);
+    padding: 10px;
+
+    .logo {
+        display: inline-block;
+
+        > img {
+            width: 120px;
+        }
+    }
+    
+    .btn {
+        @include flex();
+
+        > a {
+            @include white-btn(80px);
+
+            &:first-child {
+                margin-right: 15px;
+            }
         }
     }
 }

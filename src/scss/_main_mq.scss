@@ -99,4 +99,33 @@
         }
     }
 
+    /**
+    * ------------------------------------------------------------
+    * page-top-menu
+    * ------------------------------------------------------------
+    */
+
+    body > .page-top-menu {
+        @media screen and (min-width: 1920px) {
+            padding-left: calc(50vw - 960px);
+            padding-right: calc(50vw - 960px);
+        }
+
+        .logo {
+            > img {
+                width: 168px;
+            }
+        }
+        
+        .btn {
+            > a {
+                @include white-btn(100px);
+                font-size: 16px;
+
+                &:first-child {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
 }

@@ -4,6 +4,9 @@ $main-light-color: #FFF9F9;
 $font: #231815;
 $bg-main: #BC0011;
 $border: #D9D9D9;
+$day: #df8f04;
+$night: #000595;
+
 
 @mixin text( $size, $color, $line-height:normal) {
     font-size: $size;
@@ -51,6 +54,42 @@ $border: #D9D9D9;
     transform: translateY(-50%) rotate(45deg);
 }
 
+@mixin white-btn($width) {
+    width: $width;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    @include fw-bold();
+    text-align: center;;
+    color: $main-color;
+    background-color: $main-light-color;
+}
+
+@mixin back-btn() {
+    margin: 50px 0 40px;
+    text-align: center;
+
+    > a {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 14px;
+        @include fw-bold();
+        text-align: center;;
+        color: $main-color;
+        background-color: $main-light-color;
+
+        @media screen and (min-width: 800px) {
+            padding: 15px 40px;
+            font-size: 16px;
+        }
+    } 
+}
+
+@mixin promotion-btn() {
+
+}
+
 @mixin home-content-title() {
     display: block;
     width: auto;
@@ -71,10 +110,43 @@ $border: #D9D9D9;
     }
 }
 
-@mixin schedule-list() {
+@mixin child-page-headline() {
+    margin: 45px 0;
+    padding: 0 10px;
+
+    @media screen and (min-width: 800px) {
+        width: min(100%, 1366px);
+        margin: 45px auto 60px;
+    }
+
+    > img {
+        display: block;
+        width: 85%;
+
+        @media screen and (min-width: 800px) {
+            width: min(85% , 1000px);
+            margin: 0 auto;
+        }
+    }
+
+    > span {
+        display: block;
+        margin-top: 10px;
+        font-size: 12px;
+        @include fw-bold();
+
+        @media screen and (min-width: 800px) {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
+@mixin schedule-list($pc-margin:55px 0 0 auto) {
   display: block;
   width: min(100%, 500px);
-  margin: 0 auto;
+  margin: 0 auto 25px;
   padding: 12px;
   background-color: $main-light-color;
 
@@ -113,7 +185,7 @@ $border: #D9D9D9;
             width: 100%;
             margin-top: 10px;
             padding: 2px 0;
-            font-size: 10px;
+            font-size: 12px;
             @include fw-bold();
             color: $main-light-color;
             text-align: center;
@@ -121,11 +193,11 @@ $border: #D9D9D9;
         }
 
         .day-icon {
-            background-color: #E89300;
+            background-color: $day;
         }
 
         .night-icon {
-            background-color: #000595;
+            background-color: $night;
         }
       }
 
@@ -177,7 +249,7 @@ $border: #D9D9D9;
     @include flex($ai:center, $jc:space-between);
     gap: 20px;
     width: 800px;
-    margin: 55px 0 0 auto;
+    margin: $pc-margin;
 
     .head {
         @include flex(space-between,center);

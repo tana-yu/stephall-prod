@@ -1951,30 +1951,6 @@ body.post-type-archive-live-schedule section.content .list-link-cards li .schedu
 body.post-type-archive-live-schedule section.content .list-link-cards li:last-child .schedule-list {
   margin-bottom: 0;
 }
-body.post-type-archive-live-schedule .pagination {
-  margin: 20px 0;
-  text-align: center;
-}
-body.post-type-archive-live-schedule .pagination .page-numbers {
-  display: inline-block;
-  margin-left: 15px;
-  padding: 8px;
-  color: #D90000;
-  line-height: 1;
-  background-color: #FFF9F9;
-}
-body.post-type-archive-live-schedule .pagination .page-numbers:first-child {
-  margin-left: 0;
-}
-body.post-type-archive-live-schedule .pagination .dots {
-  color: #FFF9F9;
-  background-color: transparent;
-}
-body.post-type-archive-live-schedule .pagination .prev, body.post-type-archive-live-schedule .pagination .next {
-  font-size: 20px;
-  color: #FFF9F9;
-  background-color: transparent;
-}
 body.post-type-archive-live-schedule .back-btn {
   margin: 50px 0 40px;
   text-align: center;

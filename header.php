@@ -15,7 +15,7 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
             </a>
         </li>
         <li>
-            <a href="<?php echo home_url('schedule'); ?>">
+            <a href="<?php echo home_url('live-schedule'); ?>">
                 Schedule
             </a>
         </li>

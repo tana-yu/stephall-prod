@@ -4,10 +4,10 @@ get_header();
 
 <?php get_template_part('parts/page-top-menu'); ?>
 
-<div class="headline">
+<h1 class="headline">
     <?php echo tagImg('/live-schedule/headline.svg', 'Schedule'); ?>
     <span>開催予定イベント</span>
-</div>
+</h1>
 
 <section class="content">
 

@@ -4,10 +4,10 @@ get_header();
 
 <?php get_template_part('parts/page-top-menu'); ?>
 
-<div class="headline">
+<h1 class="headline">
     <?php echo tagImg('/news/headline.svg', 'News'); ?>
     <span>お知らせ一覧</span>
-</div>
+</h1>
 
 <section class="content">
 

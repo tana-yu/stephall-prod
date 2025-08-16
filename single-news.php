@@ -6,10 +6,10 @@ get_header();
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="headline">
+<h1 class="headline">
     <?php echo tagImg('/news/headline.svg', 'News'); ?>
     <span>お知らせ</span>
-</div>
+</h1>
 
 <section class="content">
 

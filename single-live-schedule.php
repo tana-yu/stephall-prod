@@ -26,10 +26,10 @@ if ( ! empty($schedule_date) ) {
 }
 ?>
 
-<div class="headline">
+<h1 class="headline">
     <?php echo tagImg('/live-schedule/headline.svg', 'Schedule'); ?>
     <span>イベント詳細</span>
-</div>
+</h1>
 
 <section class="content">
 

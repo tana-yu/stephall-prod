@@ -21,3 +21,9 @@ add_action('admin_menu', function() {
     remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=category'); // カテゴリー
     remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=post_tag'); // タグ
 });
+
+// 管理画面サイドバーから「コメント」を非表示
+function remove_menus_for_comment() {
+    remove_menu_page('edit-comments.php'); // コメントメニュー
+}
+add_action('admin_menu', 'remove_menus_for_comment');

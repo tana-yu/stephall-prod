@@ -187,10 +187,8 @@ get_header();
         </div>
     </section>
 
-
-
     <section class="news">
-        <?php echo tagImg('/home/step-news.svg', 'THIS MONTH'); ?>
+        <?php echo tagImg('/home/step-news.svg', 'NEWS'); ?>
 
         <div class="schedule">
             <div class="scroll-bar">
@@ -199,32 +197,68 @@ get_header();
             </div>
 
             <ul class="list-link-cards">
+                <?php
+                $news_query = new WP_Query([
+                    'post_type'      => 'news',
+                    'posts_per_page' => 5,
+                    'orderby'        => 'date',
+                    'order'          => 'DESC',
+                ]);
 
-                <?php for ($i = 0; $i < 10; $i++): ?>
-                    <li>
-                        <a href="" class="card">
-                            <?php echo tagImg('/home/news-thumbnail.webp', ''); ?>
-                            <div class="text-area">
-                                <div class="date-info">
-                                    <div>
-                                        <span class="month">08</span>
-                                        <span class="day-of-the-week">WED</span>
+                if ($news_query->have_posts()) :
+                    $no_image = get_template_directory_uri() . '/assets/images/no-image.webp';
+
+                    while ($news_query->have_posts()) : $news_query->the_post();
+                        $post_id   = get_the_ID();
+                        $permalink = get_permalink($post_id);
+                        $title     = get_the_title();
+
+                        // サムネイル
+                        if (has_post_thumbnail()) {
+                            $thumb_html = get_the_post_thumbnail($post_id, 'medium', ['loading' => 'lazy']);
+                        } else {
+                            $thumb_html = '<img src="' . esc_url($no_image) . '" alt="No image">';
+                        }
+
+                        $month = get_the_date('m');
+                        $day   = get_the_date('d');
+                        $week  = date('D', strtotime(get_the_date('Y-m-d')));
+
+                        ?>
+                        <li>
+                            <a href="<?php echo esc_url($permalink); ?>" class="card">
+                                <?php echo $thumb_html; ?>
+                                <div class="text-area">
+                                    <div class="date-info">
+                                        <div>
+                                            <span class="month"><?php echo esc_html($month . '/'); ?></span>
+                                            <span class="day-of-the-week"><?php echo esc_html($week); ?></span>
+                                        </div>
+                                        <span class="date"><?php echo esc_html($day); ?></span>
                                     </div>
-                                    <span class="date">23</span>
+                                    <p><?php echo esc_html($title); ?></p>
                                 </div>
-                                <p>クリックして詳細を見る</p>
+                            </a>
+                        </li>
+                    <?php endwhile;
+                    wp_reset_postdata();
+                else : ?>
+                    <li>
+                        <div class="news-list no-items">
+                            <div class="text">
+                                <p>現在、公開されているお知らせはありません。</p>
                             </div>
-                        </a>
+                        </div>
                     </li>
-                <?php endfor; ?>
-
+                <?php endif; ?>
             </ul>
         </div>
 
         <div class="line-btn">
-            <a href="">View More</a>
+            <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">View More</a>
         </div>
     </section>
+
 
     <section class="page-links">
         <ul>

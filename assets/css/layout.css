@@ -1729,6 +1729,7 @@ body.post-type-archive-live-schedule .headline > img {
   body.post-type-archive-live-schedule .headline > img {
     width: min(85%, 1000px);
     margin: 0 auto;
+    max-height: 120px;
   }
 }
 body.post-type-archive-live-schedule .headline > span {
@@ -1996,6 +1997,7 @@ body.single-live-schedule .headline > img {
   body.single-live-schedule .headline > img {
     width: min(85%, 1000px);
     margin: 0 auto;
+    max-height: 120px;
   }
 }
 body.single-live-schedule .headline > span {
@@ -2159,6 +2161,425 @@ body.single-live-schedule .back-btn > a {
 }
 @media screen and (min-width: 800px) {
   body.single-live-schedule .back-btn > a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
+/**
+ * ------------------------------------------------------------
+ * news一覧
+ * ------------------------------------------------------------
+*/
+body.post-type-archive-news .headline {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news .headline {
+    width: min(100%, 1366px);
+    margin: 45px auto 60px;
+  }
+}
+body.post-type-archive-news .headline > img {
+  display: block;
+  width: 85%;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news .headline > img {
+    width: min(85%, 1000px);
+    margin: 0 auto;
+    max-height: 120px;
+  }
+}
+body.post-type-archive-news .headline > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news .headline > span {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.post-type-archive-news section.content {
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news section.content {
+    width: min(100%, 800px);
+    margin: 0 auto;
+  }
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list {
+  display: block;
+  width: min(100%, 500px);
+  margin: 0 auto 25px;
+  padding: 12px;
+  background-color: #FFF9F9;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date {
+  width: 100px;
+  color: #D90000;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .month {
+  font-size: 16px;
+  font-weight: 700;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .date {
+  display: block;
+  margin-top: -5px;
+  font-size: 75px;
+  color: #D90000;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .day-of-the-week {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .day-icon, body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .night-icon {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 2px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFF9F9;
+  text-align: center;
+  border-radius: 10px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .day-icon {
+  background-color: #df8f04;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .night-icon {
+  background-color: #000595;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .head > img {
+  flex: 1;
+  width: calc(100% - 100px);
+  height: auto;
+  aspect-ratio: 1.4192307692;
+  object-fit: fill;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .text {
+  margin-top: 15px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .title {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: #D90000;
+  border-bottom: 1px solid #D90000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .performer {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .info {
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .leading-btn {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFF9F9;
+  background-color: #D90000;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    width: 800px;
+    margin: 0 0 30px 0;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date {
+    width: 120px;
+    color: #D90000;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .month {
+    font-size: 18px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .date {
+    font-size: 85px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .day-of-the-week {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .day-icon, body.post-type-archive-news section.content .list-link-cards li .schedule-list .head .event-date .night-icon {
+    padding: 3px 0;
+    font-size: 12px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .head > img {
+    width: 215px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .text {
+    flex: 1;
+    margin-top: 15px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .title {
+    width: 340px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: #D90000;
+    border-bottom: 1px solid #D90000;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .performer {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .info {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  body.post-type-archive-news section.content .list-link-cards li .schedule-list .leading-btn {
+    align-self: stretch;
+    width: auto;
+    padding: 0 10px;
+    text-align: center;
+    writing-mode: vertical-rl;
+  }
+}
+body.post-type-archive-news section.content .list-link-cards li:last-child .schedule-list {
+  margin-bottom: 0;
+}
+body.post-type-archive-news section.content .pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+body.post-type-archive-news section.content .pagination .page-numbers {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 8px;
+  color: #D90000;
+  line-height: 1;
+  background-color: #FFF9F9;
+}
+body.post-type-archive-news section.content .pagination .page-numbers:first-child {
+  margin-left: 0;
+}
+body.post-type-archive-news section.content .pagination .current {
+  color: #231815;
+  background-color: transparent;
+}
+body.post-type-archive-news section.content .pagination .dots {
+  color: #FFF9F9;
+  background-color: transparent;
+}
+body.post-type-archive-news section.content .pagination .prev, body.post-type-archive-news section.content .pagination .next {
+  font-size: 20px;
+  color: #FFF9F9;
+  background-color: transparent;
+}
+body.post-type-archive-news .back-btn {
+  margin: 50px 0 40px;
+  text-align: center;
+}
+body.post-type-archive-news .back-btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #D90000;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.post-type-archive-news .back-btn > a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
+/**
+ * ------------------------------------------------------------
+ * live-schedule詳細
+ * ------------------------------------------------------------
+*/
+body.single-news .headline {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news .headline {
+    width: min(100%, 1366px);
+    margin: 45px auto 60px;
+  }
+}
+body.single-news .headline > img {
+  display: block;
+  width: 85%;
+}
+@media screen and (min-width: 800px) {
+  body.single-news .headline > img {
+    width: min(85%, 1000px);
+    margin: 0 auto;
+    max-height: 120px;
+  }
+}
+body.single-news .headline > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.single-news .headline > span {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.single-news section.content {
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content {
+    width: min(100%, 800px);
+    margin: 0 auto;
+  }
+}
+body.single-news section.content .post-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content .post-thumbnail {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+body.single-news section.content .date {
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content .date {
+    font-size: 40px;
+  }
+}
+body.single-news section.content .date span {
+  font-size: 12px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content .date span {
+    font-size: 25px;
+  }
+}
+body.single-news section.content h1 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content h1 {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+}
+body.single-news section.content .note {
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+body.single-news section.content .note p {
+  font-size: 16px;
+}
+body.single-news section.content .note a {
+  color: #FFF9F9;
+  border-bottom: 1px solid #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.single-news section.content .note {
+    margin-bottom: 60px;
+    font-size: 18px;
+  }
+}
+body.single-news .promotion-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+body.single-news .promotion-btn > button {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFF9F9;
+  border: 1px solid #FFF9F9;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body.single-news .promotion-btn > button:last-child {
+  margin-bottom: 0;
+}
+body.single-news .promotion-btn > button:hover {
+  opacity: 0.8;
+}
+@media screen and (min-width: 800px) {
+  body.single-news .promotion-btn {
+    width: min(100%, 800px);
+    margin: 0 auto;
+    padding: 0 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 15px;
+  }
+  body.single-news .promotion-btn button {
+    width: calc(100% / 3);
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+}
+body.single-news .back-btn {
+  margin: 50px 0 40px;
+  text-align: center;
+}
+body.single-news .back-btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #D90000;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.single-news .back-btn > a {
     padding: 15px 40px;
     font-size: 16px;
   }

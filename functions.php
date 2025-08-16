@@ -7,7 +7,7 @@ include_once(__DIR__.'/functions/settings.php');
 include_once(__DIR__.'/functions/utils.php');
 include_once(__DIR__.'/functions/live-schedule.php');
 include_once(__DIR__.'/functions/live-schedule-bulk-create.php');
-// include_once(__DIR__.'/functions/mid-career-recruitment-posts.php');
+include_once(__DIR__.'/functions/news-posts.php');
 // include_once(__DIR__.'/functions/new-graduates-recruitment-posts.php');
 
 // コンタクトフォームで不要な自動生成タグ削除

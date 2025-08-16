@@ -1,0 +1,161 @@
+body.faq {
+
+    .headline {
+        @include child-page-headline();
+    }
+
+    section.for-customer {
+        margin: 50px auto 30px;
+
+        @media screen and (min-width: 800px) {
+            margin: 50px auto 70px;
+        }
+    }
+
+    section.for-user {
+        margin: 0 auto 50px;
+    }
+
+    section.for-customer,
+    section.for-user {
+        width: calc(100% - 20px);
+        padding: 35px 15px 15px;
+        background-color: $main-light-color;
+
+        @media screen and (min-width: 800px) {
+            width: calc(100% - 20px);
+            max-width: 800px;
+        }
+
+        > h2 {
+            margin-bottom: 35px;
+            font-size: 20px;
+            @include fw-bold();
+            text-align: center;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 45px;
+                font-size: 25px;
+            }
+        }
+
+        dl {
+            > div {
+                margin-bottom: 35px;
+
+                dt {
+                    position: relative;
+                    @include flex($jc:space-between, $ai:center);
+                    padding: 10px 45px 10px 55px;
+                    font-size: 16px;
+                    @include fw-bold();
+                    background-color: $main-color;
+                    color: $main-light-color;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    @media screen and (min-width: 800px) {
+                        font-size: 18px;
+                        padding: 15px 45px 15px 55px;
+                    }
+
+                    &:before {
+                        content: 'Q.';
+                        position: absolute;
+                        top: 45%;
+                        left: 15px;
+                        transform: translateY(-50%);
+                        font-size: 22px;
+
+                        @media screen and (min-width: 800px) {
+                            font-size: 27px;
+                        }
+                    }
+
+                    .accordion-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
+                        width: 27px;
+                        height: 27px;
+                        margin-left: 10px;
+                        border: 1px solid $main-light-color;
+                        border-radius: 50%;
+                        @include flex(center,center);
+
+                        @media screen and (min-width: 800px) {
+                            width: 32px;
+                            height: 32px;
+                        }
+
+                        > span {
+                            position: relative;
+                            width: 1px;
+                            height: 12px;
+                            background: $main-light-color;
+
+                            @media screen and (min-width: 800px) {
+                                height: 15px;
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 12px;
+                                height: 1px;
+                                background: $main-light-color;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                                @media screen and (min-width: 800px) {
+                                    width: 15px;
+                                }
+                            }
+                        }
+
+                        &.open {
+                            > span {
+                            background: transparent;
+                            }
+                        }
+                    }
+                }
+
+                dd {
+                    position: relative;
+                    display: none;
+                    margin-top: 15px;
+                    padding-left: 50px;
+                    font-size: 16px;
+
+                    @media screen and (min-width: 800px) {
+                        font-size: 18px;
+                    }
+
+                    &:before {
+                        content: 'A.';
+                        position: absolute;
+                        top: -4px;
+                        left: 15px;
+                        font-size: 22px;
+                    }
+
+                    > a {
+                        color: $main-color;
+                        border-bottom: 1px solid $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        @include back-btn();
+    }
+}

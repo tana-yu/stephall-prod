@@ -2584,6 +2584,206 @@ body.single-news .back-btn > a {
     font-size: 16px;
   }
 }
+body.faq .headline {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.faq .headline {
+    width: min(100%, 1366px);
+    margin: 45px auto 60px;
+  }
+}
+body.faq .headline > img {
+  display: block;
+  width: 85%;
+}
+@media screen and (min-width: 800px) {
+  body.faq .headline > img {
+    width: min(85%, 1000px);
+    margin: 0 auto;
+    max-height: 120px;
+  }
+}
+body.faq .headline > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.faq .headline > span {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.faq section.for-customer {
+  margin: 50px auto 30px;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer {
+    margin: 50px auto 70px;
+  }
+}
+body.faq section.for-user {
+  margin: 0 auto 50px;
+}
+body.faq section.for-customer, body.faq section.for-user {
+  width: calc(100% - 20px);
+  padding: 35px 15px 15px;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer, body.faq section.for-user {
+    width: calc(100% - 20px);
+    max-width: 800px;
+  }
+}
+body.faq section.for-customer > h2, body.faq section.for-user > h2 {
+  margin-bottom: 35px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer > h2, body.faq section.for-user > h2 {
+    margin-bottom: 45px;
+    font-size: 25px;
+  }
+}
+body.faq section.for-customer dl > div, body.faq section.for-user dl > div {
+  margin-bottom: 35px;
+}
+body.faq section.for-customer dl > div dt, body.faq section.for-user dl > div dt {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 45px 10px 55px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #D90000;
+  color: #FFF9F9;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body.faq section.for-customer dl > div dt:hover, body.faq section.for-user dl > div dt:hover {
+  opacity: 0.8;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dt, body.faq section.for-user dl > div dt {
+    font-size: 18px;
+    padding: 15px 45px 15px 55px;
+  }
+}
+body.faq section.for-customer dl > div dt:before, body.faq section.for-user dl > div dt:before {
+  content: "Q.";
+  position: absolute;
+  top: 45%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dt:before, body.faq section.for-user dl > div dt:before {
+    font-size: 27px;
+  }
+}
+body.faq section.for-customer dl > div dt .accordion-icon, body.faq section.for-user dl > div dt .accordion-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 27px;
+  height: 27px;
+  margin-left: 10px;
+  border: 1px solid #FFF9F9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dt .accordion-icon, body.faq section.for-user dl > div dt .accordion-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+body.faq section.for-customer dl > div dt .accordion-icon > span, body.faq section.for-user dl > div dt .accordion-icon > span {
+  position: relative;
+  width: 1px;
+  height: 12px;
+  background: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dt .accordion-icon > span, body.faq section.for-user dl > div dt .accordion-icon > span {
+    height: 15px;
+  }
+}
+body.faq section.for-customer dl > div dt .accordion-icon > span::before, body.faq section.for-user dl > div dt .accordion-icon > span::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  background: #FFF9F9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dt .accordion-icon > span::before, body.faq section.for-user dl > div dt .accordion-icon > span::before {
+    width: 15px;
+  }
+}
+body.faq section.for-customer dl > div dt .accordion-icon.open > span, body.faq section.for-user dl > div dt .accordion-icon.open > span {
+  background: transparent;
+}
+body.faq section.for-customer dl > div dd, body.faq section.for-user dl > div dd {
+  position: relative;
+  display: none;
+  margin-top: 15px;
+  padding-left: 50px;
+  font-size: 16px;
+}
+@media screen and (min-width: 800px) {
+  body.faq section.for-customer dl > div dd, body.faq section.for-user dl > div dd {
+    font-size: 18px;
+  }
+}
+body.faq section.for-customer dl > div dd:before, body.faq section.for-user dl > div dd:before {
+  content: "A.";
+  position: absolute;
+  top: -4px;
+  left: 15px;
+  font-size: 22px;
+}
+body.faq section.for-customer dl > div dd > a, body.faq section.for-user dl > div dd > a {
+  color: #D90000;
+  border-bottom: 1px solid #D90000;
+}
+body.faq .back-btn {
+  margin: 50px 0 40px;
+  text-align: center;
+}
+body.faq .back-btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #D90000;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.faq .back-btn > a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 800px) {
   /**
     * ------------------------------------------------------------

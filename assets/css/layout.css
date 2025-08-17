@@ -2784,6 +2784,150 @@ body.faq .back-btn > a {
     font-size: 16px;
   }
 }
+body.contact .headline {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.contact .headline {
+    width: min(100%, 1366px);
+    margin: 45px auto 60px;
+  }
+}
+body.contact .headline > img {
+  display: block;
+  width: 85%;
+}
+@media screen and (min-width: 800px) {
+  body.contact .headline > img {
+    width: min(85%, 1000px);
+    margin: 0 auto;
+    max-height: 120px;
+  }
+}
+body.contact .headline > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.contact .headline > span {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.contact section.web-contact, body.contact section.tel-contact {
+  width: calc(100% - 20px);
+  padding: 35px 15px 15px;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact, body.contact section.tel-contact {
+    width: calc(100% - 20px);
+    max-width: 800px;
+  }
+}
+body.contact section.web-contact > h2, body.contact section.tel-contact > h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact > h2, body.contact section.tel-contact > h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+}
+body.contact section.web-contact {
+  margin: 50px auto 30px;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact {
+    margin: 50px auto 70px;
+  }
+}
+body.contact section.tel-contact {
+  margin: 0 auto 50px;
+}
+body.contact section.tel-contact > p {
+  font-size: 16px;
+  text-align: left;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.tel-contact > p {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.contact section.tel-contact .number {
+  margin-top: 20px;
+  padding-left: 25px;
+  text-align: center;
+}
+body.contact section.tel-contact .number > a {
+  position: relative;
+  font-size: 24px;
+  color: #D90000;
+  font-weight: 700;
+  border-bottom: 1px solid #D90000;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.tel-contact .number > a {
+    font-size: 35px;
+  }
+}
+body.contact section.tel-contact .number > a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 30px;
+  background-image: url("../images/contact/tel-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.tel-contact .number > a:before {
+    width: 20px;
+    height: 35px;
+  }
+}
+body.contact section.tel-contact .number > span {
+  font-size: 13px;
+  color: #231815;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.tel-contact .number > span {
+    vertical-align: 3px;
+    font-size: 16px;
+  }
+}
+body.contact .back-btn {
+  margin: 50px 0 40px;
+  text-align: center;
+}
+body.contact .back-btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #D90000;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.contact .back-btn > a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 800px) {
   /**
     * ------------------------------------------------------------

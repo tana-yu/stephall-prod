@@ -58,3 +58,4 @@ Call Stack:
 08/03/25 8:15:11: layout.scss - Undefined mixin text: _main.scss on line 7, at column 5
 Call Stack:
 #0 import _main.scss layout.scss on line 3
+08/17/25 5:44:36: layout.scss - unclosed block: failed at `` /home/xs763501/ytanaca.com/public_html/stephall/wp-content/themes/stephall/src/scss/_contact.scss on line 34, at column 0

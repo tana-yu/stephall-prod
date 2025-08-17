@@ -2820,7 +2820,7 @@ body.contact .headline > span {
 }
 body.contact section.web-contact, body.contact section.tel-contact {
   width: calc(100% - 20px);
-  padding: 35px 15px 15px;
+  padding: 35px 15px 35px;
   background-color: #FFF9F9;
 }
 @media screen and (min-width: 800px) {
@@ -2848,6 +2848,168 @@ body.contact section.web-contact {
   body.contact section.web-contact {
     margin: 50px auto 70px;
   }
+}
+body.contact section.web-contact > p {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact > p {
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+}
+body.contact section.web-contact > p > a {
+  color: #D90000;
+  border-bottom: 1px solid #D90000;
+}
+body.contact section.web-contact fieldset {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D9D9D9;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset {
+    padding-bottom: 0;
+  }
+}
+body.contact section.web-contact fieldset > div {
+  padding: 14px 0 20px;
+  border-bottom: 1px solid #D9D9D9;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px 0;
+  }
+}
+body.contact section.web-contact fieldset > div .form-label {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 15px;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset > div .form-label {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+}
+body.contact section.web-contact fieldset > div ::placeholder {
+  font-weight: 400;
+  color: #C3C3C3;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset > div .wpcf7-form-control-wrap {
+    width: 70%;
+  }
+}
+body.contact section.web-contact fieldset > div .wpcf7-form-control-wrap input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #231815;
+  background-color: transparent;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset > div .wpcf7-form-control-wrap input {
+    height: 38px;
+    font-size: 16px;
+  }
+}
+body.contact section.web-contact fieldset > div .inquiry-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact fieldset > div .inquiry-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item {
+  margin: 0 20px 0 0;
+}
+body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 17px;
+}
+body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item label input {
+  width: 18px;
+  height: 18px;
+}
+body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item label .wpcf7-list-item-label {
+  padding-left: 5px;
+  font-size: 14px;
+}
+body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item:last-child label {
+  margin-bottom: 0;
+}
+body.contact section.web-contact fieldset .textarea {
+  width: 100%;
+  border: none;
+}
+body.contact section.web-contact fieldset .textarea textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #231815;
+  background-color: transparent;
+}
+body.contact section.web-contact .wpcf7-spinner {
+  display: none;
+}
+body.contact section.web-contact .wpcf7-acceptance {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item {
+  margin: 0 auto 30px;
+}
+body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label .privacy-policy {
+  width: 18px;
+  height: 18px;
+}
+body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label .wpcf7-list-item-label {
+  padding-left: 15px;
+  font-size: 16px;
+}
+body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label .wpcf7-list-item-label > a {
+  color: #D90000;
+  border-bottom: 1px solid #D90000;
+}
+body.contact section.web-contact .submit-btn {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #FFF9F9;
+  text-align: center;
+  background-color: #D90000;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body.contact section.web-contact .submit-btn:hover {
+  opacity: 0.8;
 }
 body.contact section.tel-contact {
   margin: 0 auto 50px;
@@ -2927,6 +3089,17 @@ body.contact .back-btn > a {
     padding: 15px 40px;
     font-size: 16px;
   }
+}
+.wpcf7-not-valid-tip {
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+}
+.wpcf7-response-output {
+  padding-top: 10px;
+  border-color: transparent !important;
+  color: #dc3232;
+  text-align: center;
 }
 @media screen and (min-width: 800px) {
   /**

@@ -59,3 +59,6 @@ Call Stack:
 Call Stack:
 #0 import _main.scss layout.scss on line 3
 08/17/25 5:44:36: layout.scss - unclosed block: failed at `` /home/xs763501/ytanaca.com/public_html/stephall/wp-content/themes/stephall/src/scss/_contact.scss on line 34, at column 0
+08/17/25 8:26:26: layout.scss - Undefined variable $light-blue: _contact.scss on line 56, at column 17
+Call Stack:
+#0 import _contact.scss layout.scss on line 8

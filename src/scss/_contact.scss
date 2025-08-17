@@ -7,7 +7,7 @@ body.contact {
     section.web-contact,
     section.tel-contact {
         width: calc(100% - 20px);
-        padding: 35px 15px 15px;
+        padding: 35px 15px 35px;
         background-color: $main-light-color;
 
         @media screen and (min-width: 800px) {
@@ -33,6 +33,172 @@ body.contact {
 
         @media screen and (min-width: 800px) {
             margin: 50px auto 70px;
+        }
+
+        > p {
+            margin-bottom: 25px;
+            font-size: 14px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 35px;
+                font-size: 16px;
+            }
+
+            > a {
+                color: $main-color;
+                border-bottom: 1px solid $main-color;
+            }
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $line-gray;
+
+            @media screen and (min-width: 800px) {
+                padding-bottom: 0;
+            }
+
+            > div {
+                padding: 14px 0 20px;
+                border-bottom: 1px solid $line-gray;
+
+                @media screen and (min-width: 800px) {
+                    @include flex($ai:center);
+                    padding: 50px 0;
+                }
+
+                .form-label {
+                    display: block;
+                    margin-bottom: 13px;
+                    font-size: 15px;
+
+                    @media screen and (min-width: 800px) {
+                        flex: 1;
+                        margin-bottom: 0;
+                        font-size: 18px;
+                    }
+                }
+
+                ::placeholder {
+                    @include fw-regular();
+                    color: $placeholder;
+                }
+
+                .wpcf7-form-control-wrap {
+                    @media screen and (min-width: 800px) {
+                        width: 70%;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 50px;
+                        padding: 10px;
+                        font-size: 14px;
+                        border: 1px solid $font;
+                        background-color: transparent;
+
+                        @media screen and (min-width: 800px) {
+                            height: 38px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .inquiry-items {
+                    @include flex($fd:column);
+
+                    @media screen and (min-width: 800px) {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+
+                    .wpcf7-list-item {
+                        margin: 0 20px 0 0;
+
+                        label {
+                            @include flex($ai:center);
+                            margin-bottom: 17px;
+
+                            input {
+                                width: 18px;
+                                height: 18px;
+                            }
+
+                            .wpcf7-list-item-label {
+                                padding-left: 5px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        &:last-child label {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .textarea {
+                width: 100%;
+                border: none;
+
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 14px;
+                    border: 1px solid $font;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .wpcf7-spinner {
+            display: none;
+        }
+
+        .wpcf7-acceptance {
+            @include flex($jc:center);
+
+            .wpcf7-list-item {
+                margin: 0 auto 30px;
+
+                > label {
+                    @include flex($ai:center);
+
+                    .privacy-policy {
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    .wpcf7-list-item-label {
+                        padding-left: 15px;
+                        font-size: 16px;
+
+                        > a {
+                            color: $main-color;
+                            border-bottom: 1px solid $main-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .submit-btn {
+            display: block;
+            width: 250px;
+            margin: 0 auto;
+            padding: 15px 0;
+            font-size: 14px;
+            color: $main-light-color;
+            text-align: center;
+            background-color: $main-color;
+            border: none;
+            cursor: pointer;
+            transition: .4s;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 
@@ -100,4 +266,19 @@ body.contact {
     .back-btn {
         @include back-btn();
     }
+}
+
+
+// リセット
+.wpcf7-not-valid-tip {
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.wpcf7-response-output {
+    padding-top: 10px;
+    border-color: transparent !important;
+    color: #dc3232;
+    text-align: center;
 }

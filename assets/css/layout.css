@@ -1471,6 +1471,20 @@ body.home section.page-links ul li a .text .leading-text {
   font-size: 11px;
   font-weight: 400;
 }
+body.home section.page-links ul li .online-shop:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-image: url("../images/home/external-link-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 body.home section.hall-rental {
   margin-top: 60px;
   padding: 0 10px;
@@ -3463,6 +3477,20 @@ body.privacy-policy .back-btn > a {
     border-top: 1px solid #FFF9F9;
     border-right: 1px solid #FFF9F9;
     transform: translateY(-50%) rotate(45deg);
+  }
+  body.home section.page-links ul li .online-shop .text .leading-text:after {
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-image: url("../images/home/external-link-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   body.home section.hall-rental {
     width: min(100%, 1366px);

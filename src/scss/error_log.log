@@ -74,3 +74,6 @@ Call Stack:
 08/18/25 5:03:40: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
 08/18/25 5:03:41: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
 08/18/25 5:03:43: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:41:56: layout.scss - Undefined variable $right: _home_mq.scss on line 157, at column 29
+Call Stack:
+#0 import _home_mq.scss layout.scss on line 12

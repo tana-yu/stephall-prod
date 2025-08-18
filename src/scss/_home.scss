@@ -137,6 +137,23 @@ body.home {
                         }
                     }
                 }
+
+                .online-shop {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 40%;
+                        transform: translateY(-50%);
+                        width: 15px;
+                        height: 15px;
+                        border: none;
+                        background-image: url("../images/home/external-link-arrow.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
             }
         }
     }

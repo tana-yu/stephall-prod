@@ -264,7 +264,7 @@ get_header();
         <ul>
 
             <li>
-                <a href="">
+                <a href="about">
                     <div class="image">
                         <?php echo tagImg('/home/links-about.svg', 'StepHALLについて'); ?>
                     </div>
@@ -276,7 +276,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="live-schedule">
                     <div class="image">
                         <?php echo tagImg('/home/links-schedule.svg', '開催予定イベント'); ?>
                     </div>
@@ -336,7 +336,7 @@ get_header();
             </li>
 
             <li>
-                <a class="online-shop" href="">
+                <a class="online-shop" href="https://stephall.thebase.in/" target=”_blank>
                     <div class="image">
                         <?php echo tagImg('/home/links-online-shop.svg', 'オフィシャルグッズ販売サイト'); ?>
                     </div>
@@ -348,7 +348,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="faq">
                     <div class="image">
                         <?php echo tagImg('/home/links-faq.svg', 'よくある質問'); ?>
                     </div>
@@ -360,19 +360,19 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="movie">
                     <div class="image">
-                        <?php echo tagImg('/home/links-movie.svg', 'StepHALLについて'); ?>
+                        <?php echo tagImg('/home/links-movie.svg', 'StepHALLの動画'); ?>
                     </div>
                     <div class="text">
                         <span>Movie</span>
-                        <span class="leading-text">StepHALLについて</span>
+                        <span class="leading-text">StepHALLの動画</span>
                     </div>
                 </a>
             </li>
 
             <li>
-                <a href="">
+                <a href="#access">
                     <div class="image">
                         <?php echo tagImg('/home/links-access.svg', 'StepHALLの場所について'); ?>
                     </div>
@@ -384,7 +384,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="contact">
                     <div class="image">
                         <?php echo tagImg('/home/links-contact.svg', 'お問い合わせフォーム'); ?>
                     </div>

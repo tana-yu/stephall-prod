@@ -3101,6 +3101,123 @@ body.contact .back-btn > a {
   color: #dc3232;
   text-align: center;
 }
+body.privacy-policy .headline {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy .headline {
+    width: min(100%, 1366px);
+    margin: 45px auto 60px;
+  }
+}
+body.privacy-policy .headline > img {
+  display: block;
+  width: 85%;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy .headline > img {
+    width: min(85%, 1000px);
+    margin: 0 auto;
+    max-height: 120px;
+  }
+}
+body.privacy-policy .headline > span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy .headline > span {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.privacy-policy section.content {
+  width: calc(100% - 20px);
+  max-width: 800px;
+  margin: 50px auto 30px;
+  padding: 25px 15px 15px;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy section.content {
+    margin: 50px auto 70px;
+    padding: 25px 20px 15px;
+  }
+}
+body.privacy-policy section.content > p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy section.content > p {
+    font-size: 16px;
+  }
+}
+body.privacy-policy section.content ol > li {
+  margin-bottom: 40px;
+}
+body.privacy-policy section.content ol > li:last-child {
+  margin-bottom: 40px;
+}
+body.privacy-policy section.content ol > li h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy section.content ol > li h2 {
+    font-size: 20px;
+  }
+}
+body.privacy-policy section.content ol > li p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy section.content ol > li p {
+    font-size: 16px;
+  }
+}
+body.privacy-policy section.content ol > li ul {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+body.privacy-policy section.content ol > li ul > li {
+  font-size: 14px;
+  list-style: disc;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy section.content ol > li ul > li {
+    font-size: 16px;
+  }
+}
+body.privacy-policy section.content .established-date {
+  text-align: right;
+}
+body.privacy-policy .back-btn {
+  margin: 50px 0 40px;
+  text-align: center;
+}
+body.privacy-policy .back-btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #D90000;
+  background-color: #FFF9F9;
+}
+@media screen and (min-width: 800px) {
+  body.privacy-policy .back-btn > a {
+    padding: 15px 40px;
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 800px) {
   /**
     * ------------------------------------------------------------

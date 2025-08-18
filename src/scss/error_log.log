@@ -62,3 +62,15 @@ Call Stack:
 08/17/25 8:26:26: layout.scss - Undefined variable $light-blue: _contact.scss on line 56, at column 17
 Call Stack:
 #0 import _contact.scss layout.scss on line 8
+08/18/25 5:03:21: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:22: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:22: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:23: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:29: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:29: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:38: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:40: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:40: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:40: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:41: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1
+08/18/25 5:03:43: layout.scss - `_privacy-policy` file not found for @import: layout.scss on line 9, at column 1

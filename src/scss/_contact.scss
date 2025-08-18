@@ -140,10 +140,13 @@ body.contact {
 
             .textarea {
                 width: 100%;
+                height: auto;
                 border: none;
 
                 textarea {
                     width: 100%;
+                    max-width: 539px;
+                    height: 150px;
                     padding: 10px;
                     font-size: 14px;
                     border: 1px solid $font;

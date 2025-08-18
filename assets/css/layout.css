@@ -2956,10 +2956,13 @@ body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item:
 }
 body.contact section.web-contact fieldset .textarea {
   width: 100%;
+  height: auto;
   border: none;
 }
 body.contact section.web-contact fieldset .textarea textarea {
   width: 100%;
+  max-width: 539px;
+  height: 150px;
   padding: 10px;
   font-size: 14px;
   border: 1px solid #231815;

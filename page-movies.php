@@ -27,26 +27,61 @@ get_header();
     </p>
 
     <ul>
-        <?php for ($i = 1; $i <= 10; $i++): ?>
+        <?php
+        $videos_query = new WP_Query([
+            'post_type'      => 'videos', // カスタム投稿タイプ
+            'posts_per_page' => 10,       // 表示件数（必要に応じて調整）
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+        ]);
+
+        if ($videos_query->have_posts()) :
+            while ($videos_query->have_posts()) : $videos_query->the_post();
+
+                // メタ情報を取得
+                $youtube_url = get_post_meta(get_the_ID(), 'video_url', true);
+                $embed_url   = convert_youtube_url_to_embed($youtube_url); // 前回作った関数
+                $comment     = get_post_meta(get_the_ID(), 'video_comment', true);
+        ?>
             <li>
                 <div class="video-wrap">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oeDkECnVYBM?si=dhijLcpiAnpliYrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <?php if ($embed_url): ?>
+                        <iframe width="560" height="315" 
+                            src="<?php echo esc_url($embed_url); ?>" 
+                            title="<?php the_title_attribute(); ?>" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    <?php endif; ?>
                 </div>
+
                 <div class="title">
-                    <h2>作人＆キャラメルパッキング編作人＆キャラメルパッキング編</h2>
+                    <h2><?php the_title(); ?></h2>
                 </div>
+
                 <div class="comment-btn">
                     コメントを表示する
                     <div class="accordion-icon">
                         <span></span>
                     </div>
                 </div>
-                <p class="comment">
-                    お待ちかね、第3回の案内ゲストは4月10日に2マンライブを行ってくれた作人＆キャラメルパッキングの登場です。2組の人柄と仲の良さが伝わってきます。
-                </p>
+
+                <?php if ($comment): ?>
+                    <p class="comment">
+                        <?php echo nl2br(esc_html($comment)); ?>
+                    </p>
+                <?php endif; ?>
             </li>
-        <?php endfor; ?>
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        else:
+            echo '<li>動画がまだ投稿されていません。</li>';
+        endif;
+        ?>
     </ul>
+
 
 </section>
 

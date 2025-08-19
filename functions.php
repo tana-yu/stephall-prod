@@ -8,7 +8,7 @@ include_once(__DIR__.'/functions/utils.php');
 include_once(__DIR__.'/functions/live-schedule.php');
 include_once(__DIR__.'/functions/live-schedule-bulk-create.php');
 include_once(__DIR__.'/functions/news-posts.php');
-// include_once(__DIR__.'/functions/new-graduates-recruitment-posts.php');
+include_once(__DIR__.'/functions/movies-posts.php');
 
 // コンタクトフォームで不要な自動生成タグ削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');

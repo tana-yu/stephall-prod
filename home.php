@@ -365,7 +365,7 @@ get_header();
                         <?php echo tagImg('/home/links-movie.svg', 'StepHALLの動画'); ?>
                     </div>
                     <div class="text">
-                        <span>Movie</span>
+                        <span>Movies</span>
                         <span class="leading-text">StepHALLの動画</span>
                     </div>
                 </a>

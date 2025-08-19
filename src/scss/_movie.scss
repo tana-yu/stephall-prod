@@ -1,0 +1,202 @@
+body.movies {
+
+    .headline {
+        @include child-page-headline();
+    }
+
+    section.content {
+        width: calc(100% - 40px);
+        margin: 50px auto 30px;
+
+        @media screen and (min-width: 800px) {
+            width: min(100%, 1360px);
+            padding: 0 20px;
+            margin: 50px auto 70px;
+        }
+
+        @media screen and (min-width: 1360px) {
+            padding: 0;
+        }
+
+        .content-headline {
+            position: relative;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 60px;
+                background-image: url("../images/movies/bg-text.svg");
+                background-repeat: repeat-x;
+                background-size: 130% auto;
+                background-position: 0 50%;
+                animation: scrollBackground 10s linear infinite;
+            }
+
+            > img {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+
+                @media screen and (min-width: 800px) {
+                    width: min(70%, 600px);
+                }
+            }
+
+            @keyframes scrollBackground {
+                from {
+                    background-position-x: 0;
+                }
+                to {
+                    background-position-x: 140%; // background-sizeのwidthと合わせると滑らかループ
+                }
+            }
+        }
+
+        > p {
+            margin-bottom: 30px;
+            font-size: 16px;
+
+            > a {
+                color: $main-light-color;
+                border-bottom: 1px solid $main-light-color;
+            }
+
+            @media screen and (min-width: 800px) {
+                margin-bottom: 80px;
+                font-size: 18px;
+                text-align: center;
+                line-height: 1.8;
+            }
+        }
+
+        ul {
+
+            @media screen and (min-width: 800px) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            @media screen and (min-width: 1000px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            li {
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
+
+                .video-wrap {
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .title {
+                    @include flex($ai:center);
+                    height: 55px;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $font;
+
+                    h2 {
+                        font-size: 16px;
+                        @include fw-bold();
+                    }
+                }
+
+                .comment-btn {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $main-light-color;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    .accordion-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: -25px;
+                        transform: translateY(-50%);
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 10px;
+                        border: 1px solid $main-light-color;
+                        border-radius: 50%;
+                        @include flex(center,center);
+
+                        @media screen and (min-width: 800px) {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        > span {
+                            position: relative;
+                            width: 1px;
+                            height: 8px;
+                            background: $main-light-color;
+
+                            @media screen and (min-width: 800px) {
+                                height: 12px;
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 8px;
+                                height: 1px;
+                                background: $main-light-color;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+
+                                @media screen and (min-width: 800px) {
+                                    width: 12px;
+                                }
+                            }
+                        }
+
+                        &.open {
+                            > span {
+                            background: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .comment {
+                    display: none;
+                    margin-top: 10px;
+                    font-size: 14px;
+
+                    @media screen and (min-width: 800px) {
+                        position: absolute;
+                        z-index: 1;
+                        width: 100%;
+                        padding: 0 15px 15px 10px;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        @include back-btn();
+    }
+}

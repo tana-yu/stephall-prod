@@ -30,8 +30,8 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
             </a>
         </li>
         <li>
-            <a href="<?php echo home_url('movie'); ?>">
-                Movie
+            <a href="<?php echo home_url('movies'); ?>">
+                Movies
             </a>
         </li>
         <li>

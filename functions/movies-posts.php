@@ -11,7 +11,7 @@ function register_videos_post_type() {
         'labels' => [
             'name'          => '動画',
             'singular_name' => '動画',
-            'menu_name'     => '動画',
+            'menu_name'     => 'トイレ動画',
             'add_new'       => '新規追加',
             'add_new_item'  => '動画を追加',
             'edit_item'     => '動画を編集',

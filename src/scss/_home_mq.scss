@@ -151,6 +151,11 @@
                     }
 
                     .online-shop {
+                        
+                        &:after {
+                            position: static;
+                        }
+
                         .text {
                             .leading-text {
                                 &:after {

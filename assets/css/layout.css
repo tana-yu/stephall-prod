@@ -3718,6 +3718,9 @@ body.privacy-policy .back-btn > a {
     border-right: 1px solid #FFF9F9;
     transform: translateY(-50%) rotate(45deg);
   }
+  body.home section.page-links ul li .online-shop:after {
+    position: static;
+  }
   body.home section.page-links ul li .online-shop .text .leading-text:after {
     content: "";
     position: absolute;

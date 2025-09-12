@@ -4,7 +4,7 @@
     </a>
     
     <div class="btn">
-        <a href="">Access</a>
-        <a href="">Contact</a>
+        <a href="/#access">Access</a>
+        <a href="contact">Contact</a>
     </div>
 </section>

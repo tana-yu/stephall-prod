@@ -29,6 +29,9 @@ body > .bottom-header {
 
     .logo {
         display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
         
         > img {
             width: 120px;
@@ -172,6 +175,16 @@ body > .bottom-header {
             }
         }
     }
+}
+
+body.home > .bottom-header .logo {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.scrolled > .bottom-header .logo {
+  opacity: 1;
+  visibility: visible;
 }
 
 

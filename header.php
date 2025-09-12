@@ -2,8 +2,8 @@
 get_template_part('parts/head'); // ← 共通 head 読み込み
 ?>
 
-<header class="bottom-header">
-    <a class="logo" href="<?php echo home_url(); ?>" rel="home">
+<header class="bottom-header <?php echo is_front_page() ? 'is-front' : 'is-sub'; ?>">
+    <a class="logo<?php echo is_front_page() ? ' show' : ''; ?>" href="<?php echo home_url(); ?>" rel="home">
         <?php echo tagImg('main-logo.svg', get_bloginfo('name'), 'logo'); ?>
     </a>
     
@@ -20,7 +20,7 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
             </a>
         </li>
         <li>
-            <a href="<?php echo home_url(''); ?>">
+            <a href="<?php echo home_url('about#hall_spec'); ?>">
                 HALL Info
             </a>
         </li>

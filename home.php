@@ -289,7 +289,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="about#hall_rental">
                     <div class="image">
                         <?php echo tagImg('/home/links-hall-rental.svg', 'レンタルの料金・資料など'); ?>
                     </div>
@@ -301,7 +301,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="about#hall_spec">
                     <div class="image">
                         <?php echo tagImg('/home/links-hall-spec.svg', '機材・照明などのリスト'); ?>
                     </div>
@@ -313,7 +313,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="about#floor">
                     <div class="image">
                         <?php echo tagImg('/home/links-floor.svg', 'フロアマップ・座席表'); ?>
                     </div>
@@ -325,7 +325,7 @@ get_header();
             </li>
 
             <li>
-                <a href="">
+                <a href="about#gear-rental-staff-dispatch">
                     <div class="image">
                         <?php echo tagImg('/home/links-gear-rental-staff-dispatch.svg', '機材レンタル・人材派遣に関して'); ?>
                     </div>

@@ -413,15 +413,14 @@ get_header();
         </div>
 
         <div id="splide-slider" class="splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide"><?php echo tagImg('/home/hall-rental1.webp', ''); ?></li>
-                        <li class="splide__slide"><?php echo tagImg('/home/hall-rental2.webp', ''); ?></li>
-                        <li class="splide__slide"><?php echo tagImg('/home/hall-rental3.webp', ''); ?></li>
-                        <li class="splide__slide"><?php echo tagImg('/home/hall-rental4.webp', ''); ?></li>
-                        <li class="splide__slide"><?php echo tagImg('/home/hall-rental5.webp', ''); ?></li>
-                    </ul>
-                </div>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><?php echo tagImg('/home/hall-rental1.webp', ''); ?></li>
+                    <li class="splide__slide"><?php echo tagImg('/home/hall-rental2.webp', ''); ?></li>
+                    <li class="splide__slide"><?php echo tagImg('/home/hall-rental3.webp', ''); ?></li>
+                    <li class="splide__slide"><?php echo tagImg('/home/hall-rental4.webp', ''); ?></li>
+                    <li class="splide__slide"><?php echo tagImg('/home/hall-rental5.webp', ''); ?></li>
+                </ul>
             </div>
         </div>
 

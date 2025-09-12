@@ -94,7 +94,7 @@ get_header();
                 <dd>
                     平日：60,000円〜　週末：80,000円〜<br>
                     ※昼夜、祝日、土日により料金が異なります。<br>
-                    ※詳細は<button class="inline-pdf">price list</button>から
+                    ※詳細は<button class="inline-pdf" onclick="window.open('<?php echo esc_url(get_option('price_list')); ?>','_blank')">price list</button>から
                 </dd>
             </div>
             <div>
@@ -114,54 +114,55 @@ get_header();
 
         <ul>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('price_list')); ?>','_blank')">
                     <p>Price list</p>
                     <span>料金表</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('agreement')); ?>','_blank')">
                     <p>Agreement</p>
                     <span>誓約書</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('sound_system')); ?>','_blank')">
                     <p>Sound System</p>
                     <span>音響機材</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('lighting_system')); ?>','_blank')">
                     <p>Lighting System</p>
                     <span>照明機材</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('instruments')); ?>','_blank')">
                     <p>Instruments</p>
                     <span>楽器機材</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('lighting_diagram')); ?>','_blank')">
                     <p>Lighting Diagram</p>
                     <span>照明回路図</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('fader_layout')); ?>','_blank')">
                     <p>Fader Layout</p>
                     <span>フェーダー表</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('stage_layout')); ?>','_blank')">
                     <p>Stage Layout</p>
                     <span>舞台図面</span>
                 </button>
             </li>
         </ul>
+
     </section>
 
     <section id="gear-rental-staff-dispatch" class="gear-rental-staff-dispatch">
@@ -194,25 +195,26 @@ get_header();
                 <dt>レンタル費(例)</dt>
                 <dd>
                     よくある例を載せる<br>
-                    ※詳しい料金表は<button class="inline-pdf">コチラ</button>
+                    ※詳しい料金表は<button class="inline-pdf" onclick="window.open('<?php echo esc_url(get_option('rental_equipment')); ?>','_blank')">コチラ</button>
                 </dd>
             </div>
         </dl>
 
         <ul>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('rental_equipment')); ?>','_blank')">
                     <p>Rental Equipment</p>
                     <span>レンタル機材表</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('rental_instruments')); ?>','_blank')">
                     <p>Rental Instruments</p>
                     <span>楽器機材表</span>
                 </button>
             </li>
         </ul>
+
 
     </section>
 
@@ -238,18 +240,19 @@ get_header();
         
         <ul>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('seating_chart')); ?>','_blank')">
                     <p>Seating Chart</p>
                     <span>座席表</span>
                 </button>
             </li>
             <li>
-                <button>
+                <button onclick="window.open('<?php echo esc_url(get_option('stage_layout')); ?>','_blank')">
                     <p>Stage Layout</p>
                     <span>舞台図面</span>
                 </button>
             </li>
         </ul>
+
     </section>
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/about-slider.js"></script>

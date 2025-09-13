@@ -591,26 +591,26 @@ body > footer .copyrights small {
  * page-top-menu
  * ------------------------------------------------------------
 */
-body > .page-top-menu {
+body > main .page-top-menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
   padding: 10px;
 }
-body > .page-top-menu .logo {
+body > main .page-top-menu .logo {
   display: inline-block;
 }
-body > .page-top-menu .logo > img {
+body > main .page-top-menu .logo > img {
   width: 120px;
 }
-body > .page-top-menu .btn {
+body > main .page-top-menu .btn {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
 }
-body > .page-top-menu .btn > a {
+body > main .page-top-menu .btn > a {
   width: 80px;
   padding: 5px 0;
   text-align: center;
@@ -620,7 +620,7 @@ body > .page-top-menu .btn > a {
   color: #D90000;
   background-color: #FFF9F9;
 }
-body > .page-top-menu .btn > a:first-child {
+body > main .page-top-menu .btn > a:first-child {
   margin-right: 15px;
 }
 body.home section.top {

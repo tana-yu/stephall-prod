@@ -2,6 +2,8 @@
 get_header();
 ?>
 
+ <main role="main"> 
+
     <?php get_template_part('parts/page-top-menu'); ?>
 
     <div class="headline">
@@ -256,6 +258,8 @@ get_header();
     </section>
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/about-slider.js"></script>
+
+</main>
 
 <?php
 get_footer();

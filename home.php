@@ -7,12 +7,19 @@ get_header();
     <section class="top">
         <video class="pc-only" playsinline autoplay muted loop src="<?php echo get_template_directory_uri(); ?>/assets/images/home/main-video-pc.mp4"></video>
         <video class="sp-only" playsinline autoplay muted loop src="<?php echo get_template_directory_uri(); ?>/assets/images/home/main-video-sp.mp4"></video>
-        <!-- <?php echo tagImg('home/top-logo-white-line.svg', get_bloginfo('name'), 'logo'); ?> -->
-        <?php echo tagImg('home/top-logo.svg', get_bloginfo('name'), 'logo'); ?>
+        <?php echo tagImg('home/top-logo-white-line.svg', get_bloginfo('name'), 'logo'); ?>
+        <!-- <?php echo tagImg('home/top-logo.svg', get_bloginfo('name'), 'logo'); ?> -->
         <div class="scroll">
             SCROLL
         </div>
     </section>
+
+    <?php if ( is_front_page() ) : ?>
+        <div id="page-transition">
+            <div class="split left"></div>
+            <div class="split right"></div>
+        </div>
+    <?php endif; ?>
 
     <section class="today">
         <?php echo tagImg('/home/today.svg', 'TODAY'); ?>
@@ -499,6 +506,20 @@ get_header();
 </main>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/home-slider.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const transition = document.getElementById("page-transition");
+  if (!transition) return;
+
+  setTimeout(() => {
+    transition.classList.add("animate");
+    setTimeout(() => {
+      transition.classList.add("hidden");
+    }, 1200);
+  }, 500);
+});
+</script>
 
 <?php
 get_footer();

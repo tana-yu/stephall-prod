@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         transition.classList.add("hidden");
         bottomHeader.classList.add("show");
-      }, 1700); // ← オーバーレイが消えるタイミング
+      }, 1000);
     } else {
       bottomHeader.classList.add("show");
     }
   }, 500);
 });
+s

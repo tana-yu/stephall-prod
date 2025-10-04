@@ -13,6 +13,9 @@ get_header();
 
     <section class="content">
 
+        <?php echo tagImg('/movies/zumin.webp', '', 'zumin'); ?>
+        <?php echo tagImg('/movies/wowhara.webp', '', 'wowhara'); ?>
+
         <div class="content-headline">
             <?php echo tagImg('/movies/toilet-headline.webp', 'StepHALLトイレ案内動画 '); ?>
         </div>
@@ -94,6 +97,20 @@ get_header();
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/movies-accordion.js"></script>
 
 </main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const triggerImg = document.querySelector(".content-headline > img");
+  const content = document.querySelector("section.content");
+
+  if (!triggerImg || !content) return;
+
+  triggerImg.addEventListener("click", function () {
+    content.classList.toggle("show-chars");
+  });
+});
+
+</script>
 
 <?php
 get_footer();

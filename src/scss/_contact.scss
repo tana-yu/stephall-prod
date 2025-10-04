@@ -119,6 +119,7 @@ body.contact {
                         label {
                             @include flex($ai:center);
                             margin-bottom: 17px;
+                            cursor: pointer;
 
                             input {
                                 width: 18px;
@@ -171,6 +172,7 @@ body.contact {
                     .privacy-policy {
                         width: 18px;
                         height: 18px;
+                        cursor: pointer;
                     }
 
                     .wpcf7-list-item-label {
@@ -192,6 +194,7 @@ body.contact {
             margin: 0 auto;
             padding: 15px 0;
             font-size: 14px;
+            @include fw-bold();
             color: $main-light-color;
             text-align: center;
             background-color: $main-color;
@@ -201,6 +204,11 @@ body.contact {
 
             &:hover {
                 opacity: 0.8;
+                transition: .4s;
+            }
+
+            @media screen and (min-width: 800px) {
+                font-size: 18px;
             }
         }
     }

@@ -3523,6 +3523,7 @@ body.movies .headline > span {
   }
 }
 body.movies section.content {
+  position: relative;
   width: calc(100% - 40px);
   margin: 50px auto 30px;
 }
@@ -3536,6 +3537,39 @@ body.movies section.content {
 @media screen and (min-width: 1360px) {
   body.movies section.content {
     padding: 0;
+  }
+}
+body.movies section.content .zumin, body.movies section.content .wowhara {
+  display: none;
+  position: absolute;
+}
+body.movies section.content.show-chars .zumin, body.movies section.content.show-chars .wowhara {
+  display: block;
+  opacity: 1;
+}
+body.movies section.content .zumin {
+  top: -66px;
+  right: -13px;
+  width: 70px;
+}
+@media screen and (min-width: 800px) {
+  body.movies section.content .zumin {
+    top: -180px;
+    right: 0;
+    left: 80px;
+    width: 200px;
+  }
+}
+body.movies section.content .wowhara {
+  top: -79px;
+  right: 40px;
+  width: 85px;
+}
+@media screen and (min-width: 800px) {
+  body.movies section.content .wowhara {
+    top: -130px;
+    right: 50px;
+    width: 220px;
   }
 }
 body.movies section.content .content-headline {
@@ -3556,6 +3590,16 @@ body.movies section.content .content-headline > img {
   display: block;
   width: 100%;
   margin: 0 auto;
+  cursor: pointer;
+}
+body.movies section.content .content-headline > img:hover {
+  opacity: 1;
+}
+@media screen and (min-width: 800px) {
+  body.movies section.content .content-headline > img:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+  }
 }
 @media screen and (min-width: 800px) {
   body.movies section.content .content-headline > img {
@@ -3704,7 +3748,7 @@ body.movies section.content ul li .comment {
     position: absolute;
     z-index: 1;
     width: 100%;
-    padding: 0 15px 15px 10px;
+    padding: 0 15px 15px 0;
     background-color: #D90000;
   }
 }
@@ -3886,6 +3930,7 @@ body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item 
   align-items: center;
   flex-direction: row;
   margin-bottom: 17px;
+  cursor: pointer;
 }
 body.contact section.web-contact fieldset > div .inquiry-items .wpcf7-list-item label input {
   width: 18px;
@@ -3933,6 +3978,7 @@ body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label {
 body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label .privacy-policy {
   width: 18px;
   height: 18px;
+  cursor: pointer;
 }
 body.contact section.web-contact .wpcf7-acceptance .wpcf7-list-item > label .wpcf7-list-item-label {
   padding-left: 15px;
@@ -3948,6 +3994,7 @@ body.contact section.web-contact .submit-btn {
   margin: 0 auto;
   padding: 15px 0;
   font-size: 14px;
+  font-weight: 700;
   color: #FFF9F9;
   text-align: center;
   background-color: #D90000;
@@ -3957,6 +4004,12 @@ body.contact section.web-contact .submit-btn {
 }
 body.contact section.web-contact .submit-btn:hover {
   opacity: 0.8;
+  transition: 0.4s;
+}
+@media screen and (min-width: 800px) {
+  body.contact section.web-contact .submit-btn {
+    font-size: 18px;
+  }
 }
 body.contact section.tel-contact {
   margin: 0 auto 50px;

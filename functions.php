@@ -71,6 +71,14 @@ function enqueue_theme_assets() {
         filemtime($theme_dir . '/assets/js/header-logo.js'),
         true
     );
+
+    wp_enqueue_script(
+        'toppage-bottom-header',
+        $theme_uri . '/assets/js/toppage-bottom-header.js',
+        [],
+        filemtime($theme_dir . '/assets/js/toppage-bottom-header.js'),
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_assets');
 

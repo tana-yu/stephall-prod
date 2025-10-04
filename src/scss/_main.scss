@@ -177,11 +177,18 @@ body > .bottom-header {
     }
 }
 
-body.home > .bottom-header .logo {
-  opacity: 1;
-  visibility: visible;
+.bottom-header.is-front {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
+body.home > .bottom-header .logo,
 body.scrolled > .bottom-header .logo {
   opacity: 1;
   visibility: visible;

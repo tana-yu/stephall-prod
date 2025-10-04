@@ -7,8 +7,8 @@ get_header();
     <section class="top">
         <video class="pc-only" playsinline autoplay muted loop src="<?php echo get_template_directory_uri(); ?>/assets/images/home/main-video-pc.mp4"></video>
         <video class="sp-only" playsinline autoplay muted loop src="<?php echo get_template_directory_uri(); ?>/assets/images/home/main-video-sp.mp4"></video>
-        <?php echo tagImg('home/top-logo-white-line.svg', get_bloginfo('name'), 'logo'); ?>
-        <!-- <?php echo tagImg('home/top-logo.svg', get_bloginfo('name'), 'logo'); ?> -->
+        <!-- <?php echo tagImg('home/top-logo-white-line.svg', get_bloginfo('name'), 'logo'); ?> -->
+        <?php echo tagImg('home/top-logo.svg', get_bloginfo('name'), 'logo'); ?>
         <div class="scroll">
             SCROLL
         </div>
@@ -516,7 +516,7 @@ get_header();
     transition.classList.add("animate");
     setTimeout(() => {
       transition.classList.add("hidden");
-    }, 1200);
+    }, 1800);
   }, 500);
 });
 </script>

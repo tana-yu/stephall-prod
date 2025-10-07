@@ -233,7 +233,7 @@ $placeholder: #C3C3C3;
           width: calc( 100% - 100px );
           height: auto;
           aspect-ratio: 369 / 260;
-          object-fit: fill;
+          object-fit: cover;
       }
   }
 
@@ -420,7 +420,7 @@ $placeholder: #C3C3C3;
                       width: 100%;
                       height: auto;
                       aspect-ratio: 369 / 260;
-                      object-fit: fill;
+                      object-fit: cover;
                   }
 
                   .text-area {

@@ -47,10 +47,10 @@ get_header();
 
         <p class="info">
             <?php if ( $open_time ) : ?>OPEN：<span><?php echo esc_html($open_time); ?></span><?php endif; ?>
-            <?php if ( $start_time ) : ?><br class="sp-only">START：<span><?php echo esc_html($start_time); ?></span><?php endif; ?>
-            <br><br class="sp-only">
+            <?php if ( $start_time ) : ?><br>START：<span><?php echo esc_html($start_time); ?></span><?php endif; ?>
+            <br><br>
             <?php if ( $adv_price ) : ?>ADV：<span><?php echo esc_html($adv_price); ?></span><?php endif; ?>
-            <?php if ( $door_price ) : ?><br class="sp-only">DOOR：<span><?php echo esc_html($door_price); ?></span><?php endif; ?>
+            <?php if ( $door_price ) : ?><br>DOOR：<span><?php echo esc_html($door_price); ?></span><?php endif; ?>
         </p>
 
         <?php if ( $performers ) : ?>

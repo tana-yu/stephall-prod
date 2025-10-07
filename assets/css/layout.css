@@ -792,7 +792,7 @@ body.home section.today .schedule-list .head > img {
   width: calc(100% - 100px);
   height: auto;
   aspect-ratio: 1.4192307692;
-  object-fit: fill;
+  object-fit: cover;
 }
 body.home section.today .schedule-list .text {
   margin-top: 15px;
@@ -984,7 +984,7 @@ body.home section.this-month .schedule .list-link-cards li .card > img {
   width: 100%;
   height: auto;
   aspect-ratio: 1.4192307692;
-  object-fit: fill;
+  object-fit: cover;
 }
 body.home section.this-month .schedule .list-link-cards li .card .text-area {
   display: flex;
@@ -1266,7 +1266,7 @@ body.home section.news .schedule .list-link-cards li .card > img {
   width: 100%;
   height: auto;
   aspect-ratio: 1.4192307692;
-  object-fit: fill;
+  object-fit: cover;
 }
 body.home section.news .schedule .list-link-cards li .card .text-area {
   display: flex;
@@ -2555,7 +2555,7 @@ body.post-type-archive-live-schedule section.content .list-link-cards li .schedu
   width: calc(100% - 100px);
   height: auto;
   aspect-ratio: 1.4192307692;
-  object-fit: fill;
+  object-fit: cover;
 }
 body.post-type-archive-live-schedule section.content .list-link-cards li .schedule-list .text {
   margin-top: 15px;
@@ -2975,7 +2975,7 @@ body.post-type-archive-news section.content .list-link-cards li .schedule-list .
   width: calc(100% - 100px);
   height: auto;
   aspect-ratio: 1.4192307692;
-  object-fit: fill;
+  object-fit: cover;
 }
 body.post-type-archive-news section.content .list-link-cards li .schedule-list .text {
   margin-top: 15px;

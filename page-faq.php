@@ -127,7 +127,7 @@ get_header();
                     </div>
                 </dt>
                 <dd>
-                    <a href="">HALL spec</a>に、各種機材表があります。ご参照下さい。
+                    <a href="about#hall_spec">HALL spec</a>に、各種機材表があります。ご参照下さい。
                 </dd>
             </div>
 

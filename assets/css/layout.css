@@ -3129,7 +3129,7 @@ body.post-type-archive-news .back-btn > a {
 }
 /**
  * ------------------------------------------------------------
- * live-schedule詳細
+ * news詳細
  * ------------------------------------------------------------
 */
 body.single-news .headline {
@@ -3223,6 +3223,7 @@ body.single-news section.content .note p {
 body.single-news section.content .note a {
   color: #FFF9F9;
   border-bottom: 1px solid #FFF9F9;
+  word-wrap: break-word;
 }
 @media screen and (min-width: 800px) {
   body.single-news section.content .note {

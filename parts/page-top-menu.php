@@ -4,7 +4,7 @@
     </a>
     
     <div class="btn">
-        <a href="/#access">Access</a>
-        <a href="contact">Contact</a>
+        <a href="<?php echo home_url('/#access'); ?>">Access</a>
+        <a href="<?php echo home_url('contact'); ?>">Contact</a>
     </div>
 </section>

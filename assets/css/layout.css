@@ -2803,6 +2803,7 @@ body.single-live-schedule section.content .note p {
 body.single-live-schedule section.content .note a {
   color: #FFF9F9;
   border-bottom: 1px solid #FFF9F9;
+  word-wrap: break-word;
 }
 @media screen and (min-width: 800px) {
   body.single-live-schedule section.content .note {

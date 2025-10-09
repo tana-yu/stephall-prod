@@ -78,7 +78,31 @@ get_header();
             イベントのリンクをコピーする
         </button>
         <button onclick="window.open('https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>', '_blank')">Xでシェアする</button>
-        <button onclick="window.open('https://www.instagram.com/?url=<?php echo urlencode(get_permalink()); ?>', '_blank')">Instagramでシェアする</button>
+        <button 
+            onclick="(function() {
+                const link = '<?php echo esc_url(get_permalink()); ?>';
+                navigator.clipboard.writeText(link)
+                .then(() => {
+                    alert('イベントのリンクをコピーしました。Instagram投稿時にペーストしてください！');
+                    // モバイル判定
+                    const ua = navigator.userAgent;
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
+
+                    if (isMobile) {
+                    // Instagramアプリを開く
+                    window.location.href = 'instagram://app';
+                    } else {
+                    // PCなどではInstagramのWebを開く
+                    window.open('https://www.instagram.com/', '_blank');
+                    }
+                })
+                .catch(err => {
+                    alert('コピーに失敗しました: ' + err);
+                });
+            })()">
+            Instagramでシェアする
+        </button>
+
     </div>
 
     <div class="back-btn">

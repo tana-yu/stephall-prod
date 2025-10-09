@@ -73,7 +73,7 @@ body.post-type-archive-news {
 
 /**
  * ------------------------------------------------------------
- * live-schedule詳細
+ * news詳細
  * ------------------------------------------------------------
 */
 
@@ -139,6 +139,7 @@ body.single-news {
             a {
                 color: $main-light-color;
                 border-bottom: 1px solid $main-light-color;
+                word-wrap:break-word;
             }
 
             @media screen and (min-width: 800px) {

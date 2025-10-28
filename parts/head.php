@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
 
-    <meta name="author" content="STEP Hall" />
-    <meta name="keywords" content="" />
+
+    <meta name="description" content="大阪・中津のライブハウス StepHALL。音楽と人がつながる場所。出演者募集中・ブッキング・レンタル受付中。">
+    <meta name="keywords" content="StepHALL, ステップホール, ライブハウス, 大阪, 中津, バンド, ライブ, 音楽, イベント">
+    <meta name="author" content="StepHALL">
+
+    <meta name="theme-color" content="#D90000">
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

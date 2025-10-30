@@ -199,6 +199,18 @@ body.about {
 
         .info {
             @include description-list();
+
+            dd {
+                .fee-example {
+                    display: block;
+                    font-size: 14px;
+
+                    small {
+                        font-size: 10px;
+                        line-height: 1.2;
+                    }
+                }
+            }
         }
 
         > ul {

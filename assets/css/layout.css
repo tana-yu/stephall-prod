@@ -2295,6 +2295,14 @@ body.about section.gear-rental-staff-dispatch .info > div dd button {
 body.about section.gear-rental-staff-dispatch .info > div dd button:hover {
   opacity: 0.8;
 }
+body.about section.gear-rental-staff-dispatch .info dd .fee-example {
+  display: block;
+  font-size: 14px;
+}
+body.about section.gear-rental-staff-dispatch .info dd .fee-example small {
+  font-size: 10px;
+  line-height: 1.2;
+}
 body.about section.gear-rental-staff-dispatch > ul {
   display: grid;
   grid-template-columns: repeat(1, 1fr);

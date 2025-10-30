@@ -57,7 +57,7 @@ function create_no_event_posts_for_month($year, $month) {
 
         // 投稿作成
         $post_id = wp_insert_post([
-            'post_title'  => 'No Event',
+            'post_title'  => '未公開 Event',
             'post_type'   => 'live-schedule',
             'post_status' => 'publish',
         ]);

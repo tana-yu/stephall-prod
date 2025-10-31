@@ -507,21 +507,8 @@ get_header();
 
 </main>
 
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/home-fv-anim.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/home-slider.js"></script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const transition = document.getElementById("page-transition");
-    if (!transition) return;
-
-    setTimeout(() => {
-        transition.classList.add("animate");
-        setTimeout(() => {
-        transition.classList.add("hidden");
-        }, 1800);
-    }, 500);
-    });
-</script>
 
 <?php
 get_footer();

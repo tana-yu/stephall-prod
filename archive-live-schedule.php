@@ -48,13 +48,29 @@ get_header();
             $paged = get_query_var('paged') ? (int)get_query_var('paged') : 1;
 
             $args = [
-                'post_type'      => 'live-schedule',
-                'posts_per_page' => -1, // 全件取得（JSで月ごとに絞るため）
-                'paged'          => $paged,
-                'meta_key'       => 'schedule_date',
-                'orderby'        => 'meta_value',
-                'order'          => 'ASC',
-            ];
+    'post_type'      => 'live-schedule',
+    'posts_per_page' => -1,
+    'paged'          => $paged,
+    'meta_query'     => [
+        'relation' => 'AND',
+        'date_clause' => [
+            'key'     => 'schedule_date',
+            'compare' => 'EXISTS',
+            'type'    => 'DATE',
+        ],
+        // day_or_night は存在しなくてもOK（No Event対応）
+        'daynight_clause' => [
+            'key'     => 'day_or_night',
+            'compare' => 'EXISTS',
+        ],
+    ],
+    'orderby' => [
+        'date_clause'      => 'ASC',
+        'daynight_clause'  => 'ASC',
+    ],
+];
+
+
 
             $q = new WP_Query($args);
 

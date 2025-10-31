@@ -9,46 +9,48 @@ get_template_part('parts/head'); // ← 共通 head 読み込み
     
     <div class="hamburger-overlay"></div>
     <nav>
-        <li>
-            <a href="<?php echo home_url('about'); ?>">
-                About
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('live-schedule'); ?>">
-                Schedule
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('about#hall_spec'); ?>">
-                HALL Info
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('news'); ?>">
-                News
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('movies'); ?>">
-                Movies
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('faq'); ?>">
-                FAQ
-            </a>
-        </li>
-        <li>
-            <a href="<?php echo home_url('/#access'); ?>">
-                ACCESS
-            </a>
-        </li>
-        <li class="list-contact">
-            <a href="<?php echo home_url('contact'); ?>">
-                Contact
-            </a>
-        </li>
+        <ul>
+            <li>
+                <a href="<?php echo home_url('about'); ?>">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('live-schedule'); ?>">
+                    Schedule
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('about#hall_spec'); ?>">
+                    HALL Info
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('news'); ?>">
+                    News
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('movies'); ?>">
+                    Movies
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('faq'); ?>">
+                    FAQ
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo home_url('/#access'); ?>">
+                    ACCESS
+                </a>
+            </li>
+            <li class="list-contact">
+                <a href="<?php echo home_url('contact'); ?>">
+                    Contact
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <a href="<?php echo home_url('contact'); ?>" class="contact">

@@ -252,13 +252,35 @@ $placeholder: #C3C3C3;
       }
 
       .performer {
-          margin-bottom: 10px;
-          font-size: 12px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        max-height: 36px;
       }
 
       .info {
-          margin-bottom: 15px;
-          font-size: 12px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        max-height: 51px;
+      }
+
+      .excerpt {
+        font-size: 12px;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        max-height: 36px;
       }
   }
 

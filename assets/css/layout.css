@@ -467,10 +467,10 @@ body > .bottom-header nav {
 body > .bottom-header nav.hm-visible {
   transform: translateX(0);
 }
-body > .bottom-header nav li {
+body > .bottom-header nav ul li {
   border-bottom: 1px solid #FFF9F9;
 }
-body > .bottom-header nav li a {
+body > .bottom-header nav ul li a {
   position: relative;
   display: block;
   width: 100%;
@@ -478,7 +478,7 @@ body > .bottom-header nav li a {
   font-weight: 700;
   color: #FFF9F9;
 }
-body > .bottom-header nav li a:after {
+body > .bottom-header nav ul li a:after {
   content: "";
   position: absolute;
   right: 0;
@@ -489,10 +489,10 @@ body > .bottom-header nav li a:after {
   border-right: 2px solid #FFF9F9;
   transform: translateY(-50%) rotate(45deg);
 }
-body > .bottom-header nav .list-contact {
+body > .bottom-header nav ul .list-contact {
   border: none;
 }
-body > .bottom-header nav .list-contact a {
+body > .bottom-header nav ul .list-contact a {
   width: 100%;
   margin-top: 20px;
   padding: 12px 0;
@@ -500,7 +500,7 @@ body > .bottom-header nav .list-contact a {
   text-align: center;
   background-color: #FFF9F9;
 }
-body > .bottom-header nav .list-contact a:after {
+body > .bottom-header nav ul .list-contact a:after {
   display: none;
 }
 body > .bottom-header .contact {
@@ -810,10 +810,31 @@ body.home section.today .schedule-list .text .title {
 body.home section.today .schedule-list .text .performer {
   margin-bottom: 10px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.home section.today .schedule-list .text .info {
   margin-bottom: 15px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  max-height: 51px;
+}
+body.home section.today .schedule-list .text .excerpt {
+  font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.home section.today .schedule-list .leading-btn {
   width: 100%;
@@ -2581,10 +2602,31 @@ body.post-type-archive-live-schedule section.content .list-link-cards li .schedu
 body.post-type-archive-live-schedule section.content .list-link-cards li .schedule-list .text .performer {
   margin-bottom: 10px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.post-type-archive-live-schedule section.content .list-link-cards li .schedule-list .text .info {
   margin-bottom: 15px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  max-height: 51px;
+}
+body.post-type-archive-live-schedule section.content .list-link-cards li .schedule-list .text .excerpt {
+  font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.post-type-archive-live-schedule section.content .list-link-cards li .schedule-list .leading-btn {
   width: 100%;
@@ -3002,10 +3044,31 @@ body.post-type-archive-news section.content .list-link-cards li .schedule-list .
 body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .performer {
   margin-bottom: 10px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .info {
   margin-bottom: 15px;
   font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  max-height: 51px;
+}
+body.post-type-archive-news section.content .list-link-cards li .schedule-list .text .excerpt {
+  font-size: 12px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  max-height: 36px;
 }
 body.post-type-archive-news section.content .list-link-cards li .schedule-list .leading-btn {
   width: 100%;
@@ -4249,10 +4312,6 @@ body.privacy-policy .back-btn > a {
   }
   body > .bottom-header nav {
     position: static;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
     width: auto;
     height: auto;
     padding: 0;
@@ -4260,14 +4319,20 @@ body.privacy-policy .back-btn > a {
     transform: none;
     transition: none;
   }
-  body > .bottom-header nav li {
+  body > .bottom-header nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  body > .bottom-header nav ul li {
     border-bottom: none;
     margin-right: 25px;
   }
-  body > .bottom-header nav li:last-child {
+  body > .bottom-header nav ul li:last-child {
     margin-right: 0;
   }
-  body > .bottom-header nav li a {
+  body > .bottom-header nav ul li a {
     position: relative;
     display: block;
     width: 100%;
@@ -4276,19 +4341,19 @@ body.privacy-policy .back-btn > a {
     font-weight: 700;
     color: #FFF9F9;
   }
-  body > .bottom-header nav li a:after {
+  body > .bottom-header nav ul li a:after {
     position: static;
     border-right: none;
   }
-  body > .bottom-header nav .list-contact {
+  body > .bottom-header nav ul .list-contact {
     border: none;
   }
-  body > .bottom-header nav .list-contact a {
+  body > .bottom-header nav ul .list-contact a {
     margin-top: 0;
     padding: 10px 25px;
     font-size: 16px;
   }
-  body > .bottom-header nav .list-contact a:after {
+  body > .bottom-header nav ul .list-contact a:after {
     display: none;
   }
   body > .bottom-header .contact {

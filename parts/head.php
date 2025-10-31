@@ -13,14 +13,13 @@
     <meta name="theme-color" content="#D90000">
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
     <!-- OGP -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="StepHALL | 中津のライブハウス">
     <meta property="og:description" content="大阪・中津のライブハウス StepHALL の公式サイトです。イベント情報や出演アーティスト情報はこちら。">
-    <meta property="og:url" content="https://stephall.com/">
-    <meta property="og:image" content="https://stephall.com/assets/images/ogp.png">
+    <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/ogp.png">
     <meta property="og:site_name" content="StepHALL">
     <meta property="og:locale" content="ja_JP">
 
@@ -28,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="StepHALL | 中津のライブハウス">
     <meta name="twitter:description" content="大阪・中津のライブハウス StepHALL の公式サイトです。">
-    <meta name="twitter:image" content="https://stephall.com/assets/images/ogp.png">
+    <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/ogp.png">
 
     <!-- 推奨: キャッシュ更新・LINE対策用 -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">

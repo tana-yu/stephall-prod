@@ -79,6 +79,8 @@ get_header();
                         </div>
                         <?php if (has_post_thumbnail()) : ?>
                             <?php the_post_thumbnail('medium'); ?>
+                        <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-image.webp" alt="No image" loading="lazy">
                         <?php endif; ?>
                     </div>
                     <div class="text">
@@ -178,7 +180,7 @@ get_header();
                                     </div>
                                     <span class="date"><?php echo date('d', strtotime($schedule_date)); ?></span>
                                 </div>
-                                <p><?php the_title(); ?></p>
+                                <p>クリックして詳細を見る</p>
                             </div>
                         </a>
                     </li>
@@ -244,7 +246,7 @@ get_header();
                                         </div>
                                         <span class="date"><?php echo esc_html($day); ?></span>
                                     </div>
-                                    <p><?php echo esc_html($title); ?></p>
+                                    <p>クリックして詳細を見る</p>
                                 </div>
                             </a>
                         </li>

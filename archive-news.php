@@ -34,6 +34,7 @@ get_header();
                     $post_id   = get_the_ID();
                     $title     = get_the_title();
                     $permalink = get_permalink($post_id);
+                    $excerpt = wp_trim_words(get_the_excerpt($post_id), 50, '...');
 
                     if (has_post_thumbnail()) {
                         $thumb_html = get_the_post_thumbnail($post_id, 'medium', ['loading' => 'lazy']);
@@ -59,6 +60,7 @@ get_header();
 
                             <div class="text">
                                 <h2 class="title"><?php echo esc_html($title); ?></h2>
+                                <p class="excerpt"><?php echo esc_html($excerpt); ?></p>
                             </div>
 
                             <div class="leading-btn">詳細はコチラ</div>

@@ -24,6 +24,7 @@ function register_live_schedule_post_type() {
         'supports'      => ['title', 'editor', 'thumbnail'], // editor を備考欄として利用
         'rewrite'       => ['slug' => 'live-schedule'],
         'show_in_rest'  => false, // Gutenberg無効化
+        'capability_type' => 'post',
     ]);
 }
 add_action('init', 'register_live_schedule_post_type');
@@ -206,7 +207,7 @@ function live_schedule_day_night_icon($post_id) {
 }
 
 /**
- * No Event チェック時に時間帯を「選択しない」に変更（管理画面用）
+ * No Event チェック時の自動入力（管理画面用）
  */
 function live_schedule_admin_js() {
     global $post_type;
@@ -216,19 +217,53 @@ function live_schedule_admin_js() {
         jQuery(document).ready(function($) {
             var $noEventCheckbox = $('input[name="no_event"]');
             var $dayOrNightRadios = $('input[name="day_or_night"]');
+            var $title = $('#title');
+            var $fields = [
+                'input[name="open_time"]',
+                'input[name="start_time"]',
+                'input[name="adv_price"]',
+                'input[name="door_price"]',
+                'textarea[name="performers"]'
+            ];
 
+            // チェック状態による初期設定
+            if ($noEventCheckbox.is(':checked')) {
+                applyNoEventState(true);
+            }
+
+            // チェック変更時の挙動
             $noEventCheckbox.on('change', function() {
-                if ($(this).is(':checked')) {
+                applyNoEventState($(this).is(':checked'));
+            });
+
+            // No Event適用関数
+            function applyNoEventState(isChecked) {
+                if (isChecked) {
                     // 「選択しない」にチェック
                     $dayOrNightRadios.filter('[value=""]').prop('checked', true);
+
+                    // タイトルを「No Event」に
+                    $title.val('No Event');
+
+                    // その他の項目に全角スペースをセット
+                    $fields.forEach(function(selector) {
+                        $(selector).val('　'); // 全角スペース
+                    });
+                } else {
+                    // チェック解除時、空欄に戻す（任意）
+                    if ($title.val() === 'No Event') $title.val('');
+                    $fields.forEach(function(selector) {
+                        if ($(selector).val() === '　') $(selector).val('');
+                    });
                 }
-            });
+            }
         });
         </script>
         <?php
     }
 }
 add_action('admin_footer', 'live_schedule_admin_js');
+
 
 
 // 管理画面一覧にカスタム列を追加
@@ -271,4 +306,35 @@ add_action('pre_get_posts', function($query) {
         $query->set('orderby', 'meta_value');
         $query->set('meta_type', 'DATE');
     }
+});
+
+/**
+ * ライブスケジュールのゴミ箱を空にする機能
+ */
+add_action('admin_menu', function() {
+    add_submenu_page(
+        'edit.php?post_type=live-schedule',
+        'ゴミ箱を空にする',
+        '🗑 ゴミ箱を空にする',
+        'delete_posts',
+        'empty-live-schedule-trash',
+        function() {
+            global $wpdb;
+
+            // ゴミ箱にある live-schedule 投稿を削除
+            $deleted = $wpdb->query("
+                DELETE FROM {$wpdb->posts}
+                WHERE post_status = 'trash'
+                AND post_type = 'live-schedule'
+            ");
+
+            echo '<div class="wrap"><h1>ゴミ箱を空にする</h1>';
+            if ($deleted) {
+                echo '<div class="notice notice-success"><p>' . esc_html($deleted) . ' 件の投稿を削除しました。</p></div>';
+            } else {
+                echo '<div class="notice notice-warning"><p>削除対象はありませんでした。</p></div>';
+            }
+            echo '<a href="' . admin_url('edit.php?post_type=live-schedule') . '" class="button button-primary">一覧に戻る</a></div>';
+        }
+    );
 });

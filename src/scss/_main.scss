@@ -207,6 +207,18 @@ body > footer {
     padding: 40px 0 80px;
     text-align: center;
 
+    .logo-area {
+        @include flex($jc:center);
+        gap: 25px;
+        margin: 0 auto 20px;
+
+        a {
+            img {
+                height: 50px;
+            }
+        }
+    }
+
     > a {
         font-size: 16px;
         color: $main-light-color;
@@ -248,6 +260,27 @@ body > main .page-top-menu {
             &:first-child {
                 margin-right: 15px;
             }
+        }
+    }
+}
+
+
+
+/**
+ * ------------------------------------------------------------
+ * 固定ページにスラッグ以外で作成した時のためのスタイル
+ * ------------------------------------------------------------
+*/
+
+body.page main.custom-page {
+    .inner {
+        margin: 45px 0;
+        padding: 0 10px;
+
+        @media screen and (min-width: 800px) {
+            width: calc(100% - 20px);
+            max-width: 800px;
+            margin: 0 auto;
         }
     }
 }

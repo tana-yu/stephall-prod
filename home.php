@@ -418,7 +418,7 @@ get_header();
                 小さなことでも、まずご相談ください！<br>
                 <a href="<?php echo home_url('contact'); ?>">お問い合わせフォーム</a>からご連絡お待ちしております！
             </p>
-            <a href="" class="line-btn">ホールレンタルについて</a>
+            <a href="about#hall_rental" class="line-btn">ホールレンタルについて</a>
         </div>
 
         <div id="splide-slider" class="splide">

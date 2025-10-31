@@ -89,6 +89,17 @@
     body > footer {
         padding: 80px 0 120px;
 
+        .logo-area {
+            gap: 35px;
+            margin: 0 auto 30px;
+
+            a {
+                img {
+                    height: 70px;
+                }
+            }
+        }
+
         > a {
             font-size: 18px;
         }

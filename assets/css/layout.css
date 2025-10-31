@@ -584,6 +584,17 @@ body > footer {
   padding: 40px 0 80px;
   text-align: center;
 }
+body > footer .logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 25px;
+  margin: 0 auto 20px;
+}
+body > footer .logo-area a img {
+  height: 50px;
+}
 body > footer > a {
   font-size: 16px;
   color: #FFF9F9;
@@ -627,6 +638,22 @@ body > main .page-top-menu .btn > a {
 }
 body > main .page-top-menu .btn > a:first-child {
   margin-right: 15px;
+}
+/**
+ * ------------------------------------------------------------
+ * 固定ページにスラッグ以外で作成した時のためのスタイル
+ * ------------------------------------------------------------
+*/
+body.page main.custom-page .inner {
+  margin: 45px 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 800px) {
+  body.page main.custom-page .inner {
+    width: calc(100% - 20px);
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 body.home #page-transition {
   position: fixed;
@@ -4364,6 +4391,13 @@ body.privacy-policy .back-btn > a {
   }
   body > footer {
     padding: 80px 0 120px;
+  }
+  body > footer .logo-area {
+    gap: 35px;
+    margin: 0 auto 30px;
+  }
+  body > footer .logo-area a img {
+    height: 70px;
   }
   body > footer > a {
     font-size: 18px;

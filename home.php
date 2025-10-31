@@ -113,36 +113,14 @@ get_header();
                 <div class="bar"></div>
             </div>
 
-            <ul class="list-link-cards">
-                <?php
-                // 今月の初日と末日
-                $start_of_month = date('Y-m-01');
-                $end_of_month   = date('Y-m-t');
+            <?php
+                $start_of_month = date_i18n('Y-m-01'); // 今月1日
+                $end_of_month   = date_i18n('Y-m-t');  // 今月末日
 
                 $args = [
                     'post_type'      => 'live-schedule',
                     'posts_per_page' => -1,
                     'meta_query'     => [
-                        'relation' => 'AND',
-                        [
-                            'key'     => 'schedule_date',
-                            'value'   => $start_of_month,
-                            'compare' => '>=',
-                            'type'    => 'DATE'
-                        ],
-                        [
-                            'key'     => 'schedule_date',
-                            'value'   => $end_of_month,
-                            'compare' => '<=',
-                            'type'    => 'DATE'
-                        ]
-                    ],
-                    // 昼夜順の前に日付順を優先
-                    'orderby' => [
-                        'schedule_date_clause' => 'ASC',
-                        'day_or_night_clause'  => 'ASC',
-                    ],
-                    'meta_query' => [
                         'relation' => 'AND',
                         'schedule_date_clause' => [
                             'key'     => 'schedule_date',
@@ -154,41 +132,48 @@ get_header();
                             'key'   => 'day_or_night',
                             'type'  => 'CHAR',
                         ],
-                    ]
+                    ],
+                    'orderby' => [
+                        'schedule_date_clause' => 'ASC', // 日付昇順
+                        'day_or_night_clause'  => 'ASC', // day → night
+                    ],
                 ];
+                $query = new WP_Query($args);
+            ?>
 
-                $month_query = new WP_Query($args);
 
-                if ($month_query->have_posts()) :
-                    while ($month_query->have_posts()) : $month_query->the_post();
-                        $schedule_date = get_post_meta(get_the_ID(), 'schedule_date', true);
-                        $day_or_night  = get_post_meta(get_the_ID(), 'day_or_night', true);
-                        $weekday       = date('D', strtotime($schedule_date)); // 英語略称
-                ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>" class="card">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium'); ?>
-                            <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-image.webp" alt="No image" />
-                            <?php endif; ?>
-                            <div class="text-area">
-                                <div class="date-info">
-                                    <div>
-                                        <span class="month"><?php echo date('m/', strtotime($schedule_date)); ?></span>
-                                        <span class="day-of-the-week"><?php echo esc_html($weekday); ?></span>
+            <ul class="list-link-cards">
+                <?php if ($query->have_posts()) : ?>
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <?php
+                            $schedule_date = get_post_meta(get_the_ID(), 'schedule_date', true);
+                            $weekday       = date_i18n('D', strtotime($schedule_date));
+                        ?>
+                        <li>
+                            <a href="<?php the_permalink(); ?>" class="card">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('medium'); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-image.webp" alt="No image" />
+                                <?php endif; ?>
+
+                                <div class="text-area">
+                                    <div class="date-info">
+                                        <div>
+                                            <span class="month"><?php echo date_i18n('m/', strtotime($schedule_date)); ?></span>
+                                            <span class="day-of-the-week"><?php echo esc_html($weekday); ?></span>
+                                        </div>
+                                        <span class="date"><?php echo date_i18n('d', strtotime($schedule_date)); ?></span>
                                     </div>
-                                    <span class="date"><?php echo date('d', strtotime($schedule_date)); ?></span>
+                                    <p>クリックして詳細を見る</p>
                                 </div>
-                                <p>クリックして詳細を見る</p>
-                            </div>
-                        </a>
-                    </li>
-                <?php
-                    endwhile;
-                endif;
-                wp_reset_postdata();
-                ?>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                    <?php else : ?>
+                        <li><p>今月のスケジュールは現在登録されていません。</p></li>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
             </ul>
 
             <div class="line-btn">
@@ -196,6 +181,7 @@ get_header();
             </div>
         </div>
     </section>
+
 
     <section class="news">
         <?php echo tagImg('/home/step-news.svg', 'NEWS'); ?>
@@ -509,6 +495,7 @@ get_header();
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/home-fv-anim.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/home-slider.js"></script>
+
 
 <?php
 get_footer();

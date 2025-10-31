@@ -19,10 +19,14 @@ get_header();
             $current_year  = current_time('Y'); // 現在年
 
             for ($i = 0; $i < 3; $i++) {
-                // 月と年を計算
-                $month_num   = ($current_month + $i - 1) % 12 + 1;
-                $year_offset = floor(($current_month + $i - 1) / 12);
-                $year_num    = $current_year + $year_offset;
+                $month_num = ($current_month + $i);
+                $year_num  = $current_year;
+
+                // 12月を超えた場合、翌年に繰り上げ
+                if ($month_num > 12) {
+                    $month_num -= 12;
+                    $year_num++;
+                }
 
                 // 表示用
                 $month_label = date_i18n('n月', mktime(0, 0, 0, $month_num, 1, $year_num));

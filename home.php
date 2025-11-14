@@ -152,7 +152,7 @@ get_header();
                         <li>
                             <a href="<?php the_permalink(); ?>" class="card">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
+                                    <?php the_post_thumbnail('medium', ['loading' => 'lazy']); ?>
                                 <?php else : ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/no-image.webp" alt="No image" />
                                 <?php endif; ?>

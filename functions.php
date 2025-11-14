@@ -92,3 +92,14 @@ function enqueue_splide_assets() {
     wp_enqueue_script('splide-autoscroll', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.1/dist/js/splide-extension-auto-scroll.min.js', ['splide-js'], null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_splide_assets');
+
+
+// scaled画像生成を制限
+add_filter('big_image_size_threshold', '__return_false');
+
+// medium_large（768px）サイズを無効化
+function disable_medium_large_size($sizes) {
+    unset($sizes['medium_large']);
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'disable_medium_large_size');

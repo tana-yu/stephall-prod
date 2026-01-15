@@ -2888,6 +2888,10 @@ body.single-live-schedule section.content .note a {
     font-size: 18px;
   }
 }
+body.single-live-schedule section.content .note img {
+  width: 100%;
+  max-width: 400px;
+}
 body.single-live-schedule .promotion-btn {
   display: flex;
   justify-content: flex-start;

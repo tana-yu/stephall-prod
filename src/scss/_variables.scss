@@ -271,8 +271,9 @@ $placeholder: #C3C3C3;
       }
 
       .excerpt {
-        font-size: 12px;
         display: -webkit-box;
+        margin-bottom: 15px;
+        font-size: 12px;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;

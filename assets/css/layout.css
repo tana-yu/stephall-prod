@@ -705,6 +705,7 @@ body.home section.top > img {
   transform: translate(-50%, -50%);
   z-index: 14;
   width: 300px;
+  mix-blend-mode: hard-light;
 }
 body.home section.top .scroll {
   position: absolute;

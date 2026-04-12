@@ -20,12 +20,13 @@ function register_videos_post_type() {
             'search_items'  => '動画を検索',
             'not_found'     => '動画が見つかりません',
         ],
-        'public'      => true,
-        'has_archive' => true,
-        'rewrite'     => ['slug' => 'videos'],
+        'public'      => false,
+        'has_archive' => false,
+        'rewrite'     => false,
         'supports'    => ['title'], 
         'menu_icon'   => 'dashicons-video-alt3',
-        'show_in_rest'=> true,
+        'show_in_rest' => false,
+        'show_ui'      => true,
     ]);
 }
 add_action('init', 'register_videos_post_type');
